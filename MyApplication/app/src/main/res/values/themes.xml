@@ -12,5 +12,14 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="buttonStyle">@style/disenoBoton</item>>
+    </style>
+
+    <style name="disenoBoton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/boton</item>
+        <item name="android:layout_width">311dp</item>
+        <item name="android:layout_height">50dp </item>
+        <item name="android:background">@drawable/roundstyle </item>
     </style>
 </resources>

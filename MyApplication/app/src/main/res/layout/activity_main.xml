@@ -37,8 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -57,34 +56,32 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view3"
         android:layout_width="379dp"
         android:layout_height="269dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="347dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="115dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="112dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="#EDEAEA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="311dp"
         android:layout_height="50dp"
-        android:layout_marginStart="47dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="469dp"
-        android:layout_marginEnd="53dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="212dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="#D8D3D3"
@@ -93,18 +90,20 @@
         android:text="Contraseña"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="311dp"
         android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="532dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="149dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="533dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="148dp"
         android:background="@drawable/roundstyle"
         android:text="Iniciar Sesión"
         android:textAllCaps="false"
@@ -115,6 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -129,8 +129,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
@@ -147,17 +146,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="311dp"
         android:layout_height="50dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="401dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="280dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="402dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="279dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="#D8D3D3"
         android:ems="10"
@@ -165,8 +163,10 @@
         android:text="Usuario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
