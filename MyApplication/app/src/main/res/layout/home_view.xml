@@ -5,23 +5,327 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <EditText
+        android:id="@+id/editTextText9"
+        android:layout_width="371dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="454dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="223dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Carnes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="644dp"
+        android:layout_marginBottom="73dp"
+        android:text="Costillas Baby Back 1kg"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="182dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="517dp"
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/light_gray"
+        android:padding="11dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/costillas" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="182dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="517dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/light_gray"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/TBone" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="59dp"
+        android:text="₡22,110"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="59dp"
+        android:text="₡7,115/Kg"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="644dp"
+        android:layout_marginEnd="118dp"
+        android:text="T-Bone Porter 1Kg"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="413dp"
+        android:layout_marginBottom="304dp"
+        android:text="Tequila patron silver 750ml"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="371dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="223dp"
+        android:layout_marginBottom="454dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Bebidas y Licores"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="413dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="304dp"
+        android:text="Coca'Cola Zero 2.5L"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="427dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="290dp"
+        android:text="₡1,560"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="182dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginBottom="327dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/light_gray"
+        android:padding="11dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tequilaPatron" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mascotas"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Licores"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="182dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="327dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/light_gray"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cocaCola" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Farmacia"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="427dp"
+        android:layout_marginBottom="290dp"
+        android:text="₡25,000"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Todos"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="328dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Licores"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Todos"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="328dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Licores"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mascotas"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="224dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Farmacia"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="197dp" />
+
     <Button
         android:id="@+id/button"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="92dp"
-        android:layout_height="32dp"
+        android:layout_width="161dp"
+        android:layout_height="33dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="303dp"
         android:drawableRight="@android:drawable/arrow_down_float"
         android:padding="5dp"
         android:scaleType="fitEnd"
-        android:text="Direcciones"
+        android:text="Dirección de Entrega"
         android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/black"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,24 +405,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="371dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="216dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="461dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Bebidas y Licores"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageButton
         android:id="@+id/button_topleft"
         android:layout_width="87dp"
@@ -138,5 +424,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Licores"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="411dp"
+        android:layout_height="42dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="688dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
