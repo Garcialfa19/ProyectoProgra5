@@ -15,11 +15,12 @@
         android:layout_width="379dp"
         android:layout_height="731dp"
         android:layout_marginStart="47dp"
-        android:layout_marginBottom="282dp"
+        android:layout_marginBottom="276dp"
         android:background="#5DCA61"
         android:rotation="-79"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -45,10 +46,10 @@
         android:id="@+id/textView3"
         android:layout_width="322dp"
         android:layout_height="81dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="181dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="524dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="407dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="519dp"
         android:fontFamily="sans-serif-medium"
         android:text="¡La comodidad de comprar
                                      al alcance de tu mano!"
@@ -56,9 +57,9 @@
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <View
         android:id="@+id/view3"
@@ -119,37 +120,36 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="163dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="670dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="76dp"
+        android:layout_width="169dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="25dp"
         android:text="¿No tienes una cuenta?"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button3"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="176dp"
-        android:layout_height="52dp"
+        android:layout_width="139dp"
+        android:layout_height="48dp"
         android:layout_marginStart="117dp"
         android:layout_marginTop="654dp"
         android:layout_marginEnd="118dp"
         android:layout_marginBottom="25dp"
+        android:onClick="crearCuenta"
         android:text="Crea una aquí"
         android:textAllCaps="false"
         android:textColor="#3F51B5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/textCorreo"

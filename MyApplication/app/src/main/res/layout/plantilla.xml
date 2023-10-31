@@ -7,8 +7,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="412dp"
-        android:layout_height="58dp"
+        android:layout_width="413dp"
+        android:layout_height="61dp"
         android:layout_marginTop="672dp"
         android:layout_marginBottom="2dp"
         android:orientation="horizontal"
@@ -16,12 +16,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="VisualLintBounds">
+
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="103dp"
-            android:layout_height="60dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:adjustViewBounds="true"
             android:background="@color/white"
             android:contentDescription="@string/app_name"
@@ -29,10 +35,15 @@
             app:srcCompat="@mipmap/inicio"
             tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
 
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="103dp"
-            android:layout_height="60dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:adjustViewBounds="true"
             android:background="@color/white"
             android:contentDescription="@string/app_name"
@@ -40,10 +51,15 @@
             tools:ignore="VisualLintBounds"
             tools:srcCompat="@mipmap/categoria" />
 
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="103dp"
-            android:layout_height="60dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:adjustViewBounds="true"
             android:background="@color/white"
             android:contentDescription="@string/app_name"
@@ -51,16 +67,26 @@
             tools:ignore="VisualLintBounds"
             tools:srcCompat="@mipmap/carrito" />
 
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/imageButton4"
-            android:layout_width="103dp"
-            android:layout_height="60dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:adjustViewBounds="true"
             android:background="@color/white"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
             tools:ignore="VisualLintBounds"
             tools:srcCompat="@mipmap/perfil" />
+
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <Spinner

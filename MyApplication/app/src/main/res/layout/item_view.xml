@@ -7,8 +7,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="412dp"
-        android:layout_height="58dp"
+        android:layout_width="413dp"
+        android:layout_height="61dp"
         android:layout_marginTop="672dp"
         android:layout_marginBottom="2dp"
         android:orientation="horizontal"
@@ -16,12 +16,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="VisualLintBounds">
+
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="103dp"
-            android:layout_height="60dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:adjustViewBounds="true"
             android:background="@color/white"
             android:contentDescription="@string/app_name"
@@ -29,10 +35,15 @@
             app:srcCompat="@mipmap/inicio"
             tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
 
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="103dp"
-            android:layout_height="60dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:adjustViewBounds="true"
             android:background="@color/white"
             android:contentDescription="@string/app_name"
@@ -40,10 +51,15 @@
             tools:ignore="VisualLintBounds"
             tools:srcCompat="@mipmap/categoria" />
 
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="103dp"
-            android:layout_height="60dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:adjustViewBounds="true"
             android:background="@color/white"
             android:contentDescription="@string/app_name"
@@ -51,42 +67,55 @@
             tools:ignore="VisualLintBounds"
             tools:srcCompat="@mipmap/carrito" />
 
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
         <ImageButton
             android:id="@+id/imageButton4"
-            android:layout_width="103dp"
-            android:layout_height="60dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:adjustViewBounds="true"
             android:background="@color/white"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
             tools:ignore="VisualLintBounds"
             tools:srcCompat="@mipmap/perfil" />
+
+        <Space
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="283dp"
-        android:layout_height="187dp"
+        android:layout_width="357dp"
+        android:layout_height="217dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="504dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/light_gray"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/app_name"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@mipmap/cocacola" />
 
     <TextView
         android:id="@+id/textNombreProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="256dp"
-        android:layout_marginEnd="307dp"
-        android:layout_marginBottom="456dp"
-        android:text="Nombre del Producto"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="193dp"
+        android:layout_marginBottom="429dp"
+        android:text="Coca-Cola Zero"
+        android:textSize="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,11 +125,12 @@
         android:id="@+id/textDescripProducto"
         android:layout_width="301dp"
         android:layout_height="109dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="291dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="331dp"
-        android:text="Descripción"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="311dp"
+        android:text="Coca-Cola Zero es la bebida perfecta para las personas que quieran el sabor de la Coca-Cola Original, sin azúcar ni calorías."
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,11 +140,12 @@
         android:id="@+id/textPrecioProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="423dp"
-        android:layout_marginEnd="301dp"
-        android:layout_marginBottom="289dp"
-        android:text="Precio"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="431dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="273dp"
+        android:text="₡2000"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,14 +155,14 @@
         android:id="@+id/button4"
         android:layout_width="360dp"
         android:layout_height="57dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="599dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="604dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="70dp"
         android:background="@drawable/roundstyle"
-        android:layout_marginBottom="75dp"
         android:text="Agregar al carrito"
         android:textAllCaps="false"
-        app:backgroundTint="@color/boton"
+        app:backgroundTint="@color/green"
         app:cornerRadius="@android:dimen/app_icon_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

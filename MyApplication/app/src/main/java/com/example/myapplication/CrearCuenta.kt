@@ -10,8 +10,5 @@ class CrearCuenta : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_view)
     }
-    fun crearCuenta(view: View){
-        val intent= Intent(this,MainActivity::class.java).apply { }
-        startActivity(intent)
-    }
+
 }

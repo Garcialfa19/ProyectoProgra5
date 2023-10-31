@@ -14,5 +14,8 @@ class MainActivity : AppCompatActivity() {
         val intent=Intent(this,Inicio::class.java).apply { }
         startActivity(intent)
     }
-
+    fun crearCuenta(view: View){
+        val intent= Intent(this,CrearCuenta::class.java).apply { }
+        startActivity(intent)
+    }
 }
