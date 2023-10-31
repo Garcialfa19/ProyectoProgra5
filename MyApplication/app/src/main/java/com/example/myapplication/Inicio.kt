@@ -1,8 +1,7 @@
 package com.example.myapplication
 
-import android.content.Intent
+
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 class Inicio : AppCompatActivity() {
@@ -10,8 +9,5 @@ class Inicio : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_view)
     }
-    fun regresar(view: View){
-        val intent= Intent(this,MainActivity::class.java).apply { }
-        startActivity(intent)
-    }
+
 }
