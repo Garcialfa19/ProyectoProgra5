@@ -48,10 +48,11 @@
         android:backgroundTint="@color/light_gray"
         android:padding="11dp"
         android:scaleType="fitCenter"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/costillas" />
+        app:srcCompat="@mipmap/cocacola" />
 
     <ImageButton
         android:id="@+id/imageButton11"
@@ -64,10 +65,11 @@
         android:backgroundTint="@color/light_gray"
         android:padding="15dp"
         android:scaleType="fitCenter"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/TBone" />
+        app:srcCompat="@mipmap/tbone" />
 
     <TextView
         android:id="@+id/textView33"
@@ -174,10 +176,11 @@
         android:backgroundTint="@color/light_gray"
         android:padding="11dp"
         android:scaleType="fitCenter"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tequilaPatron" />
+        app:srcCompat="@mipmap/tequilapatron" />
 
     <TextView
         android:id="@+id/textView21"
@@ -188,7 +191,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="197dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView22"
@@ -199,7 +203,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="197dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/imageButton7"
@@ -211,11 +216,12 @@
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/light_gray"
         android:padding="1dp"
+        android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cocaCola" />
+        app:srcCompat="@mipmap/cocacola" />
 
     <TextView
         android:id="@+id/textView23"
@@ -226,7 +232,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="197dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView24"
@@ -251,7 +258,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="328dp"
-        tools:layout_editor_absoluteY="197dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView30"
@@ -262,7 +270,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="197dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView8"
@@ -273,7 +282,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="328dp"
-        tools:layout_editor_absoluteY="197dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView7"
@@ -284,7 +294,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="197dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView6"
@@ -295,7 +306,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="197dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView5"
@@ -306,17 +318,19 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="197dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="161dp"
-        android:layout_height="33dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="303dp"
         android:drawableRight="@android:drawable/arrow_down_float"
+        android:contentDescription="@string/app_name"
         android:padding="5dp"
         android:scaleType="fitEnd"
         android:text="Dirección de Entrega"
@@ -341,9 +355,10 @@
         android:adjustViewBounds="true"
         android:background="@drawable/roundstyle"
         android:backgroundTint="@color/light_gray"
+        android:contentDescription="@string/app_name"
         android:padding="15dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/todos"
+        android:src="@mipmap/todos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -363,7 +378,8 @@
         android:backgroundTint="@color/light_gray"
         android:padding="10dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/mascotas"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/mascotas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -382,7 +398,8 @@
         android:backgroundTint="@color/light_gray"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/licores"
+        android:src="@mipmap/licores"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -419,7 +436,8 @@
         android:backgroundTint="@color/light_gray"
         android:padding="11dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/farmacia"
+        android:src="@mipmap/farmacia"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -434,13 +452,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="197dp" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
-        android:layout_width="411dp"
-        android:layout_height="42dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="688dp" />
+        tools:layout_editor_absoluteY="197dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
