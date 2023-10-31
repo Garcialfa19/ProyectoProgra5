@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="412dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="672dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="103dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/inicio"
+            tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="103dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/categoria" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="103dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/carrito" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="103dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/perfil" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="283dp"
+        android:layout_height="187dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="504dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textNombreProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="307dp"
+        android:layout_marginBottom="456dp"
+        android:text="Nombre del Producto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textDescripProducto"
+        android:layout_width="301dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="291dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="331dp"
+        android:text="Descripción"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPrecioProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="423dp"
+        android:layout_marginEnd="301dp"
+        android:layout_marginBottom="289dp"
+        android:text="Precio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="360dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="599dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/roundstyle"
+        android:layout_marginBottom="75dp"
+        android:text="Agregar al carrito"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/boton"
+        app:cornerRadius="@android:dimen/app_icon_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
