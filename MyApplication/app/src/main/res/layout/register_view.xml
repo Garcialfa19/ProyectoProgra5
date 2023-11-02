@@ -69,7 +69,7 @@
             app:layout_constraintBottom_toBottomOf="parent" />
 
 
-    <!-- Guideline for even spacing within view3 -->
+
     <View
             android:id="@+id/view3"
             android:layout_width="373dp"
@@ -93,14 +93,14 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.5" />
 
-    <!-- Chain for evenly spaced elements within view3 -->
+
     <androidx.constraintlayout.widget.Group
             android:id="@+id/group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:constraint_referenced_ids="textNombre, textCorreo2, textContrasena, textTel, btnRegistro" />
 
-    <!-- EditText for Nombre -->
+
     <EditText
             android:id="@+id/textNombre"
             android:layout_width="311dp"
@@ -115,7 +115,7 @@ android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view3" />
 
-    <!-- EditText for Correo -->
+
     <EditText
             android:id="@+id/textCorreo2"
             android:layout_width="311dp"
@@ -130,7 +130,7 @@ android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textNombre" />
 
-    <!-- EditText for Contraseña -->
+
     <EditText
             android:id="@+id/textContrasena"
             android:layout_width="311dp"
@@ -145,7 +145,7 @@ android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textCorreo2" />
 
-    <!-- EditText for Teléfono -->
+
     <EditText
             android:id="@+id/textTel"
             android:layout_width="311dp"
@@ -160,7 +160,7 @@ android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textContrasena" />
 
-    <!-- Button -->
+
     <Button
             android:id="@+id/btnRegistro"
             android:layout_width="311dp"
