@@ -1,187 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Inicio"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#FFFFFF"
-    tools:context=".MainActivity"
-    tools:ignore="DuplicateIds">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/Inicio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        tools:context=".MainActivity"
+        tools:ignore="DuplicateIds">
 
     <View
-        android:id="@+id/view2"
-        android:layout_width="379dp"
-        android:layout_height="731dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginBottom="275dp"
-        android:background="#FF9800"
-        android:rotation="-79"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+            android:id="@+id/view2"
+            android:layout_width="379dp"
+            android:layout_height="731dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginBottom="275dp"
+            android:background="#FF9800"
+            android:rotation="-79"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="89dp"
-        android:layout_marginBottom="597dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Regístrate"
-        android:textColor="@color/white"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="67dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="597dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Regístrate"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:gravity="center_horizontal" />
+
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="322dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="506dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="¡Productos de calidad
-                                        a un click de distancia!"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="144dp"
+            android:layout_marginBottom="506dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="¡Productos de calidad a un click de distancia!"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
+
+    <!-- Guideline for even spacing within view3 -->
     <View
-        android:id="@+id/view3"
-        android:layout_width="373dp"
-        android:layout_height="382dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="325dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="#EDEAEA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+            android:id="@+id/view3"
+            android:layout_width="373dp"
+            android:layout_height="382dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="325dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#EDEAEA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
 
+    <!-- Chain for evenly spaced elements within view3 -->
+    <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="textNombre, textCorreo2, textContrasena, textTel, btnRegistro" />
+
+    <!-- EditText for Nombre -->
     <EditText
-        android:id="@+id/textContrasena"
-        android:layout_width="311dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="499dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="182dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="#D8D3D3"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+            android:id="@+id/textNombre"
+            android:layout_width="311dp"
+            android:layout_height="50dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#D8D3D3"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
 
+    <!-- EditText for Correo -->
+    <EditText
+            android:id="@+id/textCorreo2"
+            android:layout_width="311dp"
+            android:layout_height="50dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#D8D3D3"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textNombre" />
+
+    <!-- EditText for Contraseña -->
+    <EditText
+            android:id="@+id/textContrasena"
+            android:layout_width="311dp"
+            android:layout_height="50dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#D8D3D3"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textCorreo2" />
+
+    <!-- EditText for Teléfono -->
+    <EditText
+            android:id="@+id/textTel"
+            android:layout_width="311dp"
+            android:layout_height="50dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="#D8D3D3"
+            android:hint="Teléfono"
+            android:inputType="text|phone"
+            android:paddingStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textContrasena" />
+
+    <!-- Button -->
     <Button
-        android:id="@+id/btnRegistro"
-        android:layout_width="311dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="647dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="34dp"
-        android:background="@drawable/roundstyle"
-        android:onClick="registrar"
-        android:text="Registarse"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        app:backgroundTint="@color/boton"
-        app:cornerRadius="@android:dimen/app_icon_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textNombre"
-        android:layout_width="311dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="331dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="#D8D3D3"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textCorreo2"
-        android:layout_width="311dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="425dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="256dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="#D8D3D3"
-        android:hint="Correo"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textTel"
-        android:layout_width="311dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="567dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="114dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="#D8D3D3"
-        android:hint="Teléfono"
-        android:inputType="text|phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="view3" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="textContrasena,btnRegistro,textTel,view2,textNombre,view3,textCorreo2" />
+            android:id="@+id/btnRegistro"
+            android:layout_width="311dp"
+            android:layout_height="50dp"
+            android:background="@drawable/roundstyle"
+            android:onClick="registrar"
+            android:text="Registarse"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            app:backgroundTint="@color/boton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textTel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
