@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="licores">Licores</string>
+    <string name="farmacia">Farmacia</string>
+    <string name="mascotas">Mascotas</string>
+    <string name="todos">Todos</string>
+    <string name="bebidas_y_licores">Bebidas y Licores</string>
 </resources>
