@@ -19,7 +19,8 @@
             app:queryHint="Busca en e-Market"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent
+"
     />
 
     <ScrollView
@@ -35,42 +36,128 @@
 
 
         <LinearLayout
-                android:id="@+id/Categorias_Home_View"
+                android:id="@+id/Categorias_Home_View_Main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginTop="5dp">
 
-            <include
-                    layout="@layout/categoria_licores_button"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"/>
 
-            <include
-                    layout="@layout/categoria_farmacia_button"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"/>
+            <LinearLayout
+                    android:id="@+id/Categorias_Home_View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
 
-            <include
-                    layout="@layout/categoria_mascotas_button"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"/>
+                <include
+                        layout="@layout/categoria_licores_button"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="85dp"
+                        android:layout_height="125dp"/>
 
-            <include
-                    layout="@layout/categoria_otros_button"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"/>
+                <include
+                        layout="@layout/categoria_farmacia_button"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="85dp"
+                        android:layout_height="125dp"/>
+
+                <include
+                        layout="@layout/categoria_mascotas_button"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="85dp"
+                        android:layout_height="125dp"/>
+
+                <include
+                        layout="@layout/categoria_otros_button"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="85dp"
+                        android:layout_height="125dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/Categorias_Home_View2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp">
+
+
+                <TextView
+                        android:id="@+id/editTextText5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="@string/bebidas_y_licores"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" tools:ignore="TextViewEdits"
+                        android:minHeight="48dp"/>
+
+
+               <include
+                   layout="@layout/categoria_scroll"
+                   android:layout_marginEnd="5dp"
+                   android:layout_marginStart="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+               />
+
+                <TextView
+                        android:id="@+id/editTextText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="@string/carnes"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" tools:ignore="TextViewEdits"
+                        android:minHeight="48dp"/>
+
+
+                <LinearLayout
+                        android:id="@+id/Categorias_Home_View4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:baselineAligned="false">
+
+                    <include
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                    />
+
+                    <include
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="15dp"
+                    />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
         </LinearLayout>
-
-
 
 
     </ScrollView>
