@@ -1,122 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="413dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="672dp"
-        android:layout_marginBottom="2dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="VisualLintBounds">
+            android:id="@+id/linearLayout"
+            android:layout_width="413dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="672dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="VisualLintBounds">
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:adjustViewBounds="true"
-            android:background="@color/white"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            app:srcCompat="@mipmap/inicio"
-            tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
+                android:id="@+id/imageButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                app:srcCompat="@mipmap/inicio"
+                tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck"/>
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:adjustViewBounds="true"
-            android:background="@color/white"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/categoria" />
+                android:id="@+id/imageButton2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                tools:ignore="VisualLintBounds"
+                tools:srcCompat="@mipmap/categoria"/>
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:adjustViewBounds="true"
-            android:background="@color/white"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/carrito" />
+                android:id="@+id/imageButton3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                tools:ignore="VisualLintBounds"
+                tools:srcCompat="@mipmap/carrito"/>
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:adjustViewBounds="true"
-            android:background="@color/white"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/perfil" />
+                android:id="@+id/imageButton4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                tools:ignore="VisualLintBounds"
+                tools:srcCompat="@mipmap/perfil"/>
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listCategoria"
-        android:layout_width="408dp"
-        android:layout_height="589dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="81dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="61dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/listCategoria"
+            android:layout_width="408dp"
+            android:layout_height="589dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="81dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="61dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/textNomCategoria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="269dp"
-        android:layout_marginBottom="675dp"
-        android:text="TextView"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/textNomCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="269dp"
+            android:layout_marginBottom="675dp"
+            android:text="TextView"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
