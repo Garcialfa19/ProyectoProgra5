@@ -1,4 +1,4 @@
-package com.example.myapplication
+/*package com.example.myapplication
 import java.sql.Connection
 import java.sql.PreparedStatement
 import java.sql.SQLException
@@ -20,4 +20,4 @@ object DataManager {
             e.printStackTrace()
         }
     }
-}
+}*/

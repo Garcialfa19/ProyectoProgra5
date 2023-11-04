@@ -14,13 +14,15 @@ class Registrar : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //val btnConnect: Button = findViewById(R.id.btnRegistro)
+        //val btn: Button = findViewById(R.id.btnRegistro)
         val btnConnect = R.id.btnRegistro
 
        // btnConnect.setOnClickListener {
        //     // Ejecutar la tarea de conexión en un hilo separado
         //    ConnectToDatabaseTask().execute()
         }
+
+        //val btn:Button = findViewById(R.id.btnRegistro)
     }
     fun registrar(view: View){
        // val intent= Intent(this,MainActivity::class.java).apply { }
