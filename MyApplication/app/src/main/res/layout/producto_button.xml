@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+android:layout_marginStart="10dp"
+android:layout_marginEnd="10dp">
+
+
+
+    <ImageButton
+            android:id="@+id/imageButtonTequila"
+            android:layout_width="182dp"
+            android:layout_height="118dp"
+            android:background="@drawable/roundstyle"
+            android:backgroundTint="@color/light_gray"
+            android:contentDescription="@string/app_name"
+            android:padding="11dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/categoria"
+            tools:ignore="MissingConstraints"/>
+
+    <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coca-Cola Zero 2.5L"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints"/>
+    <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₡1,560"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints"/>
+
+</LinearLayout>
