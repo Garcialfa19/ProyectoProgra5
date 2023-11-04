@@ -18,27 +18,27 @@
             android:contentDescription="@string/app_name"
             android:padding="11dp"
             android:scaleType="fitCenter"
-            android:src="@mipmap/categoria"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints"
+            android:src="@mipmap/categoria"/>
 
     <TextView
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Coca-Cola Zero 2.5L"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="11sp"
             tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints"
+            android:text="Coca-Cola Zero 2.5L"/>
     <TextView
             android:id="@+id/textView24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="₡1,560"
             android:textColor="@color/black"
             android:textSize="10sp"
             tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints"
+            android:text="₡1,560"/>
 
 </LinearLayout>
