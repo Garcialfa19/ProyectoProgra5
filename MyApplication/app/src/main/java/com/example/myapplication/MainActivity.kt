@@ -6,19 +6,18 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btn: Button = findViewById(R.id.btnInicio)
+        val btn: Button = findViewById(R.id.btn_inicio_log_in_view)
 
         btn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                val correo: EditText = findViewById(R.id.textCorreo)
-                val contrasena: EditText = findViewById(R.id.textContra)
+                val correo: EditText = findViewById(R.id.texto_Correo_log_in_view)
+                val contrasena: EditText = findViewById(R.id.texto_contra_log_in_view)
 
                 val correo1:String = correo.getText().toString()
                 val contrasena1:String = contrasena.getText().toString()

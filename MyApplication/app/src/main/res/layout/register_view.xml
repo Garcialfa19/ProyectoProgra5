@@ -12,23 +12,21 @@
         tools:ignore="DuplicateIds">
 
     <View
-            android:id="@+id/view2"
-            android:layout_width="379dp"
+            android:id="@+id/fonde_verde_log_in_view"
+            android:layout_width="match_parent"
             android:layout_height="731dp"
-            android:layout_marginStart="42dp"
-            android:layout_marginBottom="275dp"
-            android:background="#FF9800"
-            android:rotation="-79"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="300dp"
+            android:background="#ff9800"
+            android:rotation="-80"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintHorizontal_bias="0.484"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"/>
 
     <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/titulo_log_in_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
@@ -50,28 +48,30 @@
 
 
     <TextView
-            android:id="@+id/textView3"
-            android:layout_width="0dp"
-            android:layout_height="81dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="144dp"
-            android:layout_marginBottom="506dp"
+            android:id="@+id/subtitulo_log_in_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="415dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="519dp"
             android:fontFamily="sans-serif-medium"
             android:text="¡Productos de calidad a un click de distancia!"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold"
             android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/fonde_verde_log_in_view"
+            app:layout_constraintHorizontal_bias="0.5"
+    />
 
 
 
     <View
-            android:id="@+id/view3"
+            android:id="@+id/contenedor_formulario_log_in_view"
             android:layout_width="373dp"
             android:layout_height="382dp"
             android:layout_marginStart="22dp"
@@ -113,7 +113,7 @@
 android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view3" />
+            app:layout_constraintTop_toTopOf="@+id/contenedor_formulario_log_in_view" />
 
 
     <EditText

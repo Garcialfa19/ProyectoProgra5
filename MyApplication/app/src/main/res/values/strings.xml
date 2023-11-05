@@ -7,4 +7,11 @@
     <string name="bebidas_y_licores">Bebidas y Licores</string>
     <string name="carnes">Carnes</string>
     <string name="frutas_y_verduras">Frutas y Verduras</string>
+    <string name="e_market">e-Market</string>
+    <string name="subtitulo_log_in">¡La comodidad de comprar al alcance de tu mano!</string>
+    <string name="usuario">Usuario</string>
+    <string name="passwrd">Contraseña</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="no_tienes_una_cuenta">¿No tienes una cuenta?</string>
+    <string name="crea_una_aqu">Crea una aquí</string>
 </resources>
