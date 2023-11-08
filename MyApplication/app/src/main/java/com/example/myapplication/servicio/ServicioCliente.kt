@@ -22,13 +22,21 @@ class ServicioCliente: Conexion() {
 
         //atajamos al cliente que coincida
         if(rs.next()){
+            val id:Int=rs.getInt("idUsuario")
             val nombre:String=rs.getString("nombre")
+            val apellido:String=rs.getString("apellido")
             val correo:String=rs.getString("correo")
             val contrasena:String=rs.getString("contrasena")
-            val tipo:Int=rs.getInt("tipo")
+            val categoria:String=rs.getString("categoria")
+            val montoAcumulado:Float=rs.getFloat("montoAcumulado")
+            val direcciones:String=rs.getString("direcciones")
+            val metodosDePago:String=rs.getString("metodosDePago")
+            val tipo:String=rs.getString("tipo")
+            val cupones:Int=rs.getInt("cupones")
+            val carritoCompras:Int=rs.getInt("carritoCompras_idCarrito")
             val telefono:Int=rs.getInt("telefono")
 
-            cliente= Cliente(nombre, correo,contrasena,tipo,telefono)
+            //cliente= Cliente(id,nombre,apellido,correo,contrasena, categoria, montoAcumulado, direcciones, metodosDePago, tipo, cupones, carritoCompras, telefono)
         }
         else{
             cliente = null
@@ -39,16 +47,15 @@ class ServicioCliente: Conexion() {
         return cliente
     }
 
-    fun registrarCliente(nombre:String, correo:String, contrasena:String, tipo:Int ,telefono:Int){
+    fun registrarCliente(nombre:String, correo:String, contrasena:String, telefono:Int){
         val conexion:Connection=conectar()
-        val procedureCall: CallableStatement = conexion.prepareCall("{call registrarCliente(? , ? , ? , ? , ?)}")
+        val procedureCall: CallableStatement = conexion.prepareCall("{call Registrar(? , ? , ? , ?)}")
 
         //pasar los parametros recibidos en la funcion al procedimiento
         procedureCall.setString(1, nombre)
         procedureCall.setString(2, correo)
         procedureCall.setString(3, contrasena)
-        procedureCall.setInt(4, 1)
-        procedureCall.setInt(5, telefono)
+        procedureCall.setInt(4, telefono)
 
         //ejecutar el procedimiento
         procedureCall.execute()
