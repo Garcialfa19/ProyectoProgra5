@@ -12,21 +12,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-<<<<<<< Updated upstream
+
         /* val btn: Button = findViewById(R.id.btn_inicio_log_in_view)
 
          btn.setOnClickListener(object : View.OnClickListener {
              override fun onClick(v: View?) {
                  val correo: EditText = findViewById(R.id.texto_Correo_log_in_view)
                  val contrasena: EditText = findViewById(R.id.texto_contra_log_in_view)
-=======
+
         val btn: Button = findViewById(R.id.btn_inicio_log_in_view)
 
         btn.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 val correo: EditText = findViewById(R.id.texto_Correo_log_in_view)
                 val contrasena: EditText = findViewById(R.id.texto_contra_log_in_view)
->>>>>>> Stashed changes
+
 
                  val correo1:String = correo.getText().toString()
                  val contrasena1:String = contrasena.getText().toString()

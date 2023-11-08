@@ -6,7 +6,8 @@ import java.sql.ResultSet
 
 
 //**************** EN ESTA CLASE PONEMOS TODO LO QUE TENGA QUE VER CON LA TABLA CLIENTE ********************
-class ServicioCliente: Conexion() {
+class ServicioCliente {
+    /*: Conexion()
     var cliente: Cliente? = null
     fun login(correo:String, contrasena:String):Cliente?{
 
@@ -62,5 +63,5 @@ class ServicioCliente: Conexion() {
 
         //terminar la conexion
         conexion.close()
-    }
+    }*/
 }
