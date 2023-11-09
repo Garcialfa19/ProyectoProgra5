@@ -1,24 +1,18 @@
 package com.example.myapplication.modelo
 
 class Cliente {
-    var idUsuario:Int = 0
-
-    //así se hace un get and set
-        //get() {
-        //    TODO()
-        //}
-        //set(value) {}
-    var nombre:String = ""
-    var correo:String = ""
-    var contrasena:String = ""
-    var categoria:String = ""
-    var montoAcumulado:Float = 0.0f
-    var direccion:String = ""
-    var metodoDePago:String = ""
-    var tipo:Int = 0
-    var cupones:Int = 0
-    var carrito:Int=0
-    var telefono:Int = 0
+    private var idUsuario:Int = 0
+    private var nombre:String = ""
+    private var correo:String = ""
+    private var contrasena:String = ""
+    private var categoria:String = ""
+    private var montoAcumulado:Float = 0.0f
+    private var direccion:String = ""
+    private var metodoDePago:String = ""
+    private var tipo:Int = 0
+    private var cupones:Int = 0
+    private var carrito:Int=0
+    private var telefono:Int = 0
 
     //De todos los datos
     constructor(idUsuario:Int, nombre:String, correo:String,contrasena:String,categoria:String,montoAcumulado:Float,direccion:String,metodoDePago:String,tipo:Int,cupones:Int,carrito:Int, telefono:Int){
@@ -54,7 +48,7 @@ class Cliente {
     fun setCorreo(correo: String){
         this.correo= correo
     }
-    fun setContarsena(contrasena: String){
+    fun setContrasena(contrasena: String){
         this.contrasena= contrasena
     }
     fun setCategoria(categoria: String){

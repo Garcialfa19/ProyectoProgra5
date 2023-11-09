@@ -9,9 +9,9 @@ class Conexion {
     object ConexionBD{
         fun connectToDatabase(): java.sql.Connection{
             //datos de la BD
-            val url = "jdbc:mysql://localhost:3306/progra5" //si no funciona, es el nombre de la conexion //progra5 o e-Commerce
+            val url = "jdbc:mysql://localhost:3306/eComerce" //si no funciona, es el nombre de la conexion //progra5 o e-Commerce
             val user = "root"
-            val password = "admin" //admin o //pp4ssw0rd
+            val password = "pp4ssw0rd" //admin o //pp4ssw0rd
 
             return DriverManager.getConnection(url, user, password)
         }
@@ -29,13 +29,14 @@ class Conexion {
                     var contrasena= resultSet.getString("contrasena")
                     var categoria= resultSet.getString("categoria")
                     var montoAcumulado= resultSet.getFloat("montoAcumulado")
-                    var direccion= resultSet.getString("direccion")
-                    var metodoDePago= resultSet.getString("metodoDePago")
+                    var direccion= resultSet.getString("direcciones")
+                    var metodoDePago= resultSet.getString("metodosDePago")
                     var tipo= resultSet.getInt("tipo")
                     var cupones= resultSet.getInt("cupones")
                     var carrito= resultSet.getInt("carritoCompras_idCarrito")
                     var telefono= resultSet.getInt("telefono")
-                    var cliente= Cliente(idUsuario, nombre,correo,contrasena,categoria,montoAcumulado,direccion,metodoDePago,tipo,cupones,carrito,telefono)
+                    //hay que convertir los posibles valores nulos a sus valores default
+                    var cliente=Cliente(idUsuario, nombre,correo,contrasena,categoria,montoAcumulado,direccion,metodoDePago,tipo,cupones,carrito,telefono)
 
                     clientes.add(cliente)
                 }
@@ -54,12 +55,11 @@ class Conexion {
 
     }
 
+}
+fun main() {
+    var conexion=Conexion.ConexionBD.connectToDatabase()
+    var listaClientes=Conexion.ConexionBD.getAllUsers(conexion)
 
-    fun main() {
-        var conexion=Conexion.ConexionBD.connectToDatabase()
-        var listaClientes=Conexion.ConexionBD.getAllUsers(conexion)
+    listaClientes.forEach { cliente -> println(cliente.getNombre())  }
 
-        listaClientes.forEach { cliente -> println(cliente.getNombre())  }
-
-    }
 }
