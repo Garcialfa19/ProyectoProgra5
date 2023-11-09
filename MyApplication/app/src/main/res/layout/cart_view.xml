@@ -6,136 +6,151 @@
     android:layout_height="match_parent">
 
 
-    <ListView
-        android:layout_width="380dp"
-        android:layout_height="471dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="171dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  tools:ignore="MissingConstraints"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textNomCategoria"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="147dp"
-        android:layout_marginBottom="663dp"
-        android:text="Carrito de Compra"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/textNomCategoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/carrito_de_compra"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+                android:id="@+id/itemList"
+                android:layout_width="match_parent"
+                android:layout_height="471dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+
+    </LinearLayout>
+
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="360dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="604dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/roundstyle"
-        android:text="Finalizar Compra"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textAllCaps="false"
-        app:backgroundTint="@color/green"
-        app:cornerRadius="@android:dimen/app_icon_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/roundstyle"
+            android:text="Finalizar Compra"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/green"
+            app:cornerRadius="@android:dimen/app_icon_size"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="itemList" />
+
+
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="413dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="672dp"
-        android:layout_marginBottom="2dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="VisualLintBounds">
+            android:id="@+id/bottomBar"
+            android:layout_width="413dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="UnknownId">
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:adjustViewBounds="true"
-            android:background="@color/white"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            app:srcCompat="@mipmap/inicio"
-            tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
+                android:id="@+id/imageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                app:srcCompat="@mipmap/inicio"
+                tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck"/>
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:adjustViewBounds="true"
-            android:background="@color/white"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/categoria" />
+                android:id="@+id/imageButton2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                tools:ignore="VisualLintBounds"
+                tools:srcCompat="@mipmap/categoria"/>
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:adjustViewBounds="true"
-            android:background="@color/white"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/carrito" />
+                android:id="@+id/imageButton3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                tools:ignore="VisualLintBounds"
+                tools:srcCompat="@mipmap/shopping"/>
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
 
         <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:adjustViewBounds="true"
-            android:background="@color/white"
-            android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/perfil" />
+                android:id="@+id/imageButton4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:background="@color/white"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                tools:ignore="VisualLintBounds"
+                tools:srcCompat="@mipmap/perfil"/>
 
         <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
