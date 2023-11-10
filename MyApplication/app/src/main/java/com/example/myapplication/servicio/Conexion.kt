@@ -23,20 +23,33 @@ class Conexion {
                 var resultSet= statement.executeQuery(sql)
                 var clientes = ArrayList<Cliente>()
                 while (resultSet.next()){
-                    var idUsuario= resultSet.getInt("idUsuario")
-                    var nombre= resultSet.getString("nombre")
-                    var correo= resultSet.getString("correo")
-                    var contrasena= resultSet.getString("contrasena")
-                    var categoria= resultSet.getString("categoria")
-                    var montoAcumulado= resultSet.getFloat("montoAcumulado")
-                    var direccion= resultSet.getString("direcciones")
-                    var metodoDePago= resultSet.getString("metodosDePago")
-                    var tipo= resultSet.getInt("tipo")
-                    var cupones= resultSet.getInt("cupones")
-                    var carrito= resultSet.getInt("carritoCompras_idCarrito")
-                    var telefono= resultSet.getInt("telefono")
+                    var idUsuario: Int = resultSet.getInt("idUsuario")
+                    var nombre: String = (resultSet.getString("nombre") ?: "")
+                    var correo: String = (resultSet.getString("correo") ?: "")
+                    var contrasena: String = (resultSet.getString("contrasena") ?: "")
+                    var categoria: String = (resultSet.getString("categoria") ?: "")
+                    var montoAcumulado: Float = (resultSet.getFloat("montoAcumulado") ?: 0.0f)
+                    var direccion: String = resultSet.getString("direcciones")
+                    var metodoDePago: String = resultSet.getString("metodosDePago")
+                    var tipo: Int = resultSet.getInt("tipo")
+                    var cupones: Int = resultSet.getInt("cupones")
+                    var carrito: Int = resultSet.getInt("carritoCompras_idCarrito")
+                    var telefono: Int = resultSet.getInt("telefono")
                     //hay que convertir los posibles valores nulos a sus valores default
-                    var cliente=Cliente(idUsuario, nombre,correo,contrasena,categoria,montoAcumulado,direccion,metodoDePago,tipo,cupones,carrito,telefono)
+                    var cliente = Cliente(
+                        idUsuario,
+                        nombre,
+                        correo,
+                        contrasena,
+                        categoria,
+                        montoAcumulado,
+                        direccion,
+                        metodoDePago,
+                        tipo,
+                        cupones,
+                        carrito,
+                        telefono
+                    )
 
                     clientes.add(cliente)
                 }
@@ -51,8 +64,6 @@ class Conexion {
                 ArrayList()
             }
         }
-
-
     }
 
 }
