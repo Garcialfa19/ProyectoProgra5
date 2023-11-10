@@ -97,11 +97,11 @@
             android:id="@+id/group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:constraint_referenced_ids="textNombre, textCorreo2, textContrasena, textTel, btnRegistro"/>
+            app:constraint_referenced_ids="textNombreR, textCorreoR, textContrasenaR, textTelR, btnRegistro"/>
 
 
     <EditText
-            android:id="@+id/textNombre"
+            android:id="@+id/textNombreR"
             android:layout_width="311dp"
             android:layout_height="50dp"
             android:background="@drawable/roundstyle"
@@ -116,7 +116,7 @@
 
 
     <EditText
-            android:id="@+id/textCorreo2"
+            android:id="@+id/textCorreoR"
             android:layout_width="311dp"
             android:layout_height="50dp"
             android:background="@drawable/roundstyle"
@@ -127,11 +127,11 @@
             android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textNombre"/>
+            app:layout_constraintTop_toBottomOf="@id/textNombreR"/>
 
 
     <EditText
-            android:id="@+id/textContrasena"
+            android:id="@+id/textContrasenaR"
             android:layout_width="311dp"
             android:layout_height="50dp"
             android:background="@drawable/roundstyle"
@@ -142,11 +142,11 @@
             android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textCorreo2"/>
+            app:layout_constraintTop_toBottomOf="@id/textCorreoR"/>
 
 
     <EditText
-            android:id="@+id/textTel"
+            android:id="@+id/textTelR"
             android:layout_width="311dp"
             android:layout_height="50dp"
             android:background="@drawable/roundstyle"
@@ -157,7 +157,7 @@
             android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textContrasena"/>
+            app:layout_constraintTop_toBottomOf="@id/textContrasenaR"/>
 
 
     <Button
@@ -173,6 +173,6 @@
             app:backgroundTint="@color/boton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textTel"/>
+            app:layout_constraintTop_toBottomOf="@id/textTelR"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

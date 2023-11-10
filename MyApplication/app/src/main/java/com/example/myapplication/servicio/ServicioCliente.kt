@@ -1,54 +1,96 @@
 package com.example.myapplication.servicio
 import com.example.myapplication.modelo.Cliente
-import java.sql.CallableStatement
-import java.sql.Connection
-import java.sql.ResultSet
+import java.sql.DriverManager
+import java.sql.PreparedStatement
 
 
 //**************** EN ESTA CLASE PONEMOS TODO LO QUE TENGA QUE VER CON LA TABLA CLIENTE ********************
 class ServicioCliente {
-    /*: Conexion()
-    var cliente: Cliente? = null
-    fun login(correo:String, contrasena:String):Cliente?{
+   /* object ConexionBD{
+        fun connectToDatabase(): java.sql.Connection{
+            //datos de la BD
+            val url = "jdbc:mysql://localhost:3306/progra5" //si no funciona, es el nombre de la conexion //progra5 o e-Commerce
+            val user = "root"
+            val password = "admin" //admin o //pp4ssw0rd
 
-        val conexion:Connection=conectar()
-        val procedureCall: CallableStatement = conexion.prepareCall("{call login(? , ?)}")
+            return DriverManager.getConnection(url, user, password)}
+   fun agregarUsuario(connection: java.sql.Connection, nombre: String, correo: String, contrasena: String, tipo: Int, telefono:Int): Cliente? {
+        var usuarioTO: Cliente? = null
+        var ps: PreparedStatement? = null
+        val sql = "INSERT INTO cliente (nombre, correo, contrasena, tipo,telefono) VALUES (?, ?, ?, ?, ?);"
+        var statement= connection.createStatement()
+        var resultSet= statement.executeQuery(sql)
 
-        //pasar los parametros recibidos en la funcion al procedimiento
-        procedureCall.setString(1, correo)
-        procedureCall.setString(2, contrasena)
 
-        //ejecutar el procedimiento login
-        val rs:ResultSet=procedureCall.executeQuery()
+        try {
+            ConexionBD
+            sql
 
-        //atajamos al cliente que coincida
-        if(rs.next()){
-            val id:Int=rs.getInt("idUsuario")
-            val nombre:String=rs.getString("nombre")
-            val apellido:String=rs.getString("apellido")
-            val correo:String=rs.getString("correo")
-            val contrasena:String=rs.getString("contrasena")
-            val categoria:String=rs.getString("categoria")
-            val montoAcumulado:Float=rs.getFloat("montoAcumulado")
-            val direcciones:String=rs.getString("direcciones")
-            val metodosDePago:String=rs.getString("metodosDePago")
-            val tipo:String=rs.getString("tipo")
-            val cupones:Int=rs.getInt("cupones")
-            val carritoCompras:Int=rs.getInt("carritoCompras_idCarrito")
-            val telefono:Int=rs.getInt("telefono")
+            ps = connectToDatabase().prepareStatement(sql)
+            ps.setString(1, nombre)
+            ps.setString(2, correo)
+            ps.setString(3, contrasena)
+            ps.setInt(4, 1)
+            ps.setInt(5, telefono)
 
-            //cliente= Cliente(id,nombre,apellido,correo,contrasena, categoria, montoAcumulado, direcciones, metodosDePago, tipo, cupones, carritoCompras, telefono)
+
+            ps.executeUpdate()
+
+            statement.close()
+            resultSet.close()
+
+            usuarioTO = Cliente( nombre, correo, contrasena, tipo, telefono)
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+            // Paso 5
+            println("ERROR SQL: $sql")
+            statement.close()
+            resultSet.close()
+
         }
-        else{
-            cliente = null
+        return usuarioTO
         }
-        //terminar la conexion
-        conexion.close()
 
-        return cliente
-    }
+   }
+}*/
 
-    fun registrarCliente(nombre:String, correo:String, contrasena:String, telefono:Int){
+/* fun agregarUsuario(connection: java.sql.Connection, nombre: String, correo: String, contrasena: String, tipo: Int, telefono:Int): ArrayList<Cliente>{
+            var sql= "INSERT INTO cliente (nombre, correo, contrasena, tipo,telefono) VALUES (?, ?, ?, ?, ?);"
+            return try{
+                var statement= connection.createStatement()
+                var resultSet= statement.executeQuery(sql)
+                var clientes = ArrayList<Cliente>()
+                while (resultSet.next()){
+                    resultSet.setString("nombre")
+                    var correo: String = (resultSet.getString("correo")
+                    var contrasena: String = (resultSet.getString("contrasena")
+                    var tipo: Int = resultSet.getInt("tipo")?: 1
+                    var telefono: Int = resultSet.getInt("telefono")
+                    //hay que convertir los posibles valores nulos a sus valores default
+                    var cliente = Cliente(
+                        nombre,
+                        correo,
+                        contrasena,
+                        tipo,
+                        telefono
+                    )
+                    clientes.add(cliente)
+                }
+
+                statement.close()
+                resultSet.close()
+                clientes
+
+            }catch (e: SQLException){
+                println("ERROR SQL: $sql")
+                println(e.message)
+                ArrayList()
+            }
+        }*/
+
+    /*fun registrarCliente(nombre:String, correo:String, contrasena:String, telefono:Int){
         val conexion:Connection=conectar()
         val procedureCall: CallableStatement = conexion.prepareCall("{call Registrar(? , ? , ? , ?)}")
 
@@ -62,6 +104,5 @@ class ServicioCliente {
         procedureCall.execute()
 
         //terminar la conexion
-        conexion.close()
-    }*/
-}
+        conexion.close()*/
+    }

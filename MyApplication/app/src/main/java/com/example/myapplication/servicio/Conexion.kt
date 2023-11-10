@@ -9,9 +9,9 @@ class Conexion {
     object ConexionBD{
         fun connectToDatabase(): java.sql.Connection{
             //datos de la BD
-            val url = "jdbc:mysql://localhost:3306/eComerce" //si no funciona, es el nombre de la conexion //progra5 o e-Commerce
+            val url = "jdbc:mysql://localhost:3306/progra5" //si no funciona, es el nombre de la conexion //progra5 o e-Commerce
             val user = "root"
-            val password = "pp4ssw0rd" //admin o //pp4ssw0rd
+            val password = "admin" //admin o //pp4ssw0rd
 
             return DriverManager.getConnection(url, user, password)
         }
@@ -29,12 +29,12 @@ class Conexion {
                     var contrasena: String = (resultSet.getString("contrasena") ?: "")
                     var categoria: String = (resultSet.getString("categoria") ?: "")
                     var montoAcumulado: Float = (resultSet.getFloat("montoAcumulado") ?: 0.0f)
-                    var direccion: String = resultSet.getString("direcciones")
-                    var metodoDePago: String = resultSet.getString("metodosDePago")
-                    var tipo: Int = resultSet.getInt("tipo")
-                    var cupones: Int = resultSet.getInt("cupones")
-                    var carrito: Int = resultSet.getInt("carritoCompras_idCarrito")
-                    var telefono: Int = resultSet.getInt("telefono")
+                    var direccion: String = resultSet.getString("direccion") ?: ""
+                    var metodoDePago: String = resultSet.getString("metodoDePago") ?: ""
+                    var tipo: Int = resultSet.getInt("tipo")?: 0
+                    var cupones: Int = resultSet.getInt("cupones")?: 0
+                    var carrito: Int = resultSet.getInt("carritoCompras_idCarrito")?: 0
+                    var telefono: Int = resultSet.getInt("telefono")?: 0
                     //hay que convertir los posibles valores nulos a sus valores default
                     var cliente = Cliente(
                         idUsuario,
