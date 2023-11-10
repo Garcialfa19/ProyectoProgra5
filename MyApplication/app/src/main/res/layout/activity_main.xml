@@ -8,8 +8,7 @@
         android:layout_height="match_parent"
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
-        tools:context=".MainActivity"
-        tools:ignore="DuplicateIds">
+        tools:context=".MainActivity">
 
     <View
             android:id="@+id/fonde_verde_log_in_view"
