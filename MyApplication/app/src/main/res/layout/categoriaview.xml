@@ -77,7 +77,6 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="center"/>
 
-
             <include
                     layout="@layout/categoria_button"
                     android:layout_width="85dp"
