@@ -50,7 +50,6 @@ class Conexion {
                         carrito,
                         telefono
                     )
-
                     clientes.add(cliente)
                 }
 
