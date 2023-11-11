@@ -354,75 +354,70 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/scroll_home_view">
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
+
             android:contentDescription="@string/app_name"
             android:onClick="home"
             android:scaleType="fitXY"
-            app:srcCompat="@mipmap/inicio"
-            tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
+            android:src="@mipmap/inicio"
+            />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
             android:contentDescription="categoria"
-            android:onClick="categorias"
+            android:onClick="home"
             android:scaleType="fitXY"
             tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/categoria" />
+            android:src="@mipmap/categoria" />
 
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
+
             android:contentDescription="@string/app_name"
             android:onClick="cart"
             android:scaleType="fitXY"
             tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/shopping" />
+            android:src="@mipmap/shopping" />
 
         <ImageButton
             android:id="@+id/imageButton4"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
+
             android:contentDescription="@string/app_name"
             android:onClick="profile"
             android:scaleType="fitXY"
             tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/perfil" />
+            android:src="@mipmap/perfil" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

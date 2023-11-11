@@ -59,7 +59,7 @@ class ConexionCliente {
     fun main() {
         var conexion=Conexion.ConexionBD.connectToDatabase()
 
-        val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,"nombre1","correo1","contrasena1", 1,2)
+        val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,"nombre2","correo2","contrasena2", 1,3)
 
 
     }
