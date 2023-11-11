@@ -67,7 +67,7 @@ class Conexion {
         }
 
         fun validar(conexion: java.sql.Connection, correo: String, contrasena: String): Cliente? {
-            var sql = "SELECT * FROM cliente where correo=? and contrasena='?'"
+            var sql = "SELECT * FROM cliente where correo=? and contrasena=?"
             var usuarioTO: Cliente? = null
             var ps: PreparedStatement? = null
             return try {
@@ -76,8 +76,7 @@ class Conexion {
                 ps.setString(1, correo)
                 ps.setString(2, contrasena)
 
-                var statement = conexion.createStatement()
-                var resultSet = statement.executeQuery(sql)
+                var resultSet = ps.executeQuery()
                 if (resultSet.next()) {
                     var idUsuario: Int = resultSet.getInt("idUsuario")
                     var nombre: String = (resultSet.getString("nombre") ?: "")
@@ -107,13 +106,12 @@ class Conexion {
                         telefono
                     )
                     println("usuario reconocido")
-                    usuarioTO
+                    resultSet.close()
+                    cliente
                 }
 
-                statement.close()
                 resultSet.close()
-                println("usuario reconocido")
-                usuarioTO
+                null
 
             } catch (e: SQLException) {
                 println("ERROR SQL: $sql")
@@ -128,7 +126,5 @@ class Conexion {
 fun main() {
     var conexion=Conexion.ConexionBD.connectToDatabase()
     var listaClientes=Conexion.ConexionBD.validar(conexion, "correo1", "contrasena1")
-
-    val usuarioTO:Cliente =
 
 }
