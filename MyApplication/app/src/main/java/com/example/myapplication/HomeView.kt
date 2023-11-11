@@ -14,14 +14,14 @@ class HomeView : AppCompatActivity() {
     }
 
 
-    // tengo que crear otra clase que lleve a home view
+
     fun home(view: View) {
         val intent = Intent(this, Inicio::class.java)
         startActivity(intent)
     }
 
 
-    // tengo que crear otra clase que lleve a categorias view
+
     fun categorias(view: View) {
         val intent = Intent(this, categorias::class.java)
         startActivity(intent)

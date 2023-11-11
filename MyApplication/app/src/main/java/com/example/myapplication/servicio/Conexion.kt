@@ -9,9 +9,9 @@ class Conexion {
     object ConexionBD{
         fun connectToDatabase(): java.sql.Connection{
             //datos de la BD
-            val url = "jdbc:mysql://localhost:3306/progra5" //si no funciona, es el nombre de la conexion //progra5 o e-Commerce
+            val url = "jdbc:mysql://localhost:3306/eComerce" //si no funciona, es el nombre de la conexion //progra5 o e-Commerce
             val user = "root"
-            val password = "admin" //admin o //pp4ssw0rd
+            val password = "pp4ssw0rd" //admin o //pp4ssw0rd
 
             return DriverManager.getConnection(url, user, password)
         }

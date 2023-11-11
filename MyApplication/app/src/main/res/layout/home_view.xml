@@ -1,154 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/Home"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".HomeView">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeView">
 
     <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_bar_home_view"
-            android:layout_width="389dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/roundstyle"
-            android:backgroundTint="@color/light_gray"
-            app:queryHint="Busca en e-Market"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-    />
+        android:id="@+id/search_bar_home_view"
+        android:layout_width="389dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/roundstyle"
+        android:backgroundTint="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="Busca en e-Market" />
 
     <ScrollView
-            android:id="@+id/scroll_home_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintTop_toBottomOf="@+id/search_bar_home_view"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="ScrollViewCount">
+        android:id="@+id/scroll_home_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar_home_view"
+        tools:ignore="ScrollViewCount">
 
 
         <LinearLayout
-                android:id="@+id/scroll_view_main_linear_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="5dp">
+            android:id="@+id/scroll_view_main_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
 
 
             <LinearLayout
-                    android:id="@+id/categorias_home_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="5dp">
+                android:id="@+id/categorias_home_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
 
                 <!-- esto se debería de cambiar pero no es prioridad -->
                 <include
-                        layout="@layout/categoria_licores_button"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="85dp"
-                        android:layout_height="125dp"/>
+                    layout="@layout/categoria_licores_button"
+                    android:layout_width="85dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp" />
 
                 <include
-                        layout="@layout/categoria_farmacia_button"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="85dp"
-                        android:layout_height="125dp"/>
+                    layout="@layout/categoria_farmacia_button"
+                    android:layout_width="85dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp" />
 
                 <include
-                        layout="@layout/categoria_mascotas_button"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="85dp"
-                        android:layout_height="125dp"/>
+                    layout="@layout/categoria_mascotas_button"
+                    android:layout_width="85dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp" />
 
                 <include
-                        layout="@layout/categoria_otros_button"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_width="85dp"
-                        android:layout_height="125dp"/>
+                    layout="@layout/categoria_otros_button"
+                    android:layout_width="85dp"
+                    android:layout_height="125dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp" />
             </LinearLayout>
 
             <LinearLayout
-                    android:id="@+id/productos_home_view"
-                    android:layout_width="match_parent"
+                android:id="@+id/productos_home_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/titulo_bebidas_licores_home_view"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="5dp">
-
-
-                <TextView
-                        android:id="@+id/titulo_bebidas_licores_home_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:ems="10"
-                        android:inputType="text"
-                        android:text="@string/bebidas_y_licores"
-                        android:textSize="30sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" tools:ignore="TextViewEdits"
-                        android:minHeight="48dp"/>
+                    android:ems="10"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:text="@string/bebidas_y_licores"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextViewEdits" />
 
 
                 <HorizontalScrollView
-                        android:id="@+id/scroll_horizontal_bebidas_licores_home_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    android:id="@+id/scroll_horizontal_bebidas_licores_home_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                        tools:ignore="MissingConstraints,ScrollViewCount">
+                    tools:ignore="MissingConstraints,ScrollViewCount">
 
 
                     <LinearLayout
-                            android:id="@+id/scroll_horizontal_bebidas_licores_home_view_main_linear_layout"
-                            android:layout_width="wrap_content"
+                        android:id="@+id/scroll_horizontal_bebidas_licores_home_view_main_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <include
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal" android:baselineAligned="false">
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                         <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                         <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
-
-                        <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                     </LinearLayout>
 
@@ -157,63 +154,62 @@
 
 
                 <TextView
-                        android:id="@+id/titulo_carnes_home_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:ems="10"
-                        android:inputType="text"
-                        android:text="@string/carnes"
-                        android:textSize="30sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" tools:ignore="TextViewEdits"
-                        android:minHeight="48dp"/>
+                    android:id="@+id/titulo_carnes_home_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:text="@string/carnes"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextViewEdits" />
 
 
                 <HorizontalScrollView
-                        android:id="@+id/scroll_horizontal_carnes_home_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    android:id="@+id/scroll_horizontal_carnes_home_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                        tools:ignore="MissingConstraints,ScrollViewCount">
+                    tools:ignore="MissingConstraints,ScrollViewCount">
 
 
                     <LinearLayout
-                            android:id="@+id/scroll_horizontal_carnes_home_view_main_linear_layout"
-                            android:layout_width="wrap_content"
+                        android:id="@+id/scroll_horizontal_carnes_home_view_main_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <include
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal" android:baselineAligned="false">
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                         <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                         <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
-
-                        <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                     </LinearLayout>
 
@@ -222,62 +218,62 @@
 
 
                 <TextView
-                        android:id="@+id/titulo_frutas_verduras_home_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:ems="10"
-                        android:inputType="text"
-                        android:text="@string/frutas_y_verduras"
-                        android:textSize="30sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" tools:ignore="TextViewEdits"
-                        android:minHeight="48dp"/>
+                    android:id="@+id/titulo_frutas_verduras_home_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:text="@string/frutas_y_verduras"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextViewEdits" />
 
 
                 <HorizontalScrollView
-                        android:id="@+id/scroll_horizontal_frutas_verduras_home_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    android:id="@+id/scroll_horizontal_frutas_verduras_home_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                        tools:ignore="MissingConstraints,ScrollViewCount">
+                    tools:ignore="MissingConstraints,ScrollViewCount">
 
 
                     <LinearLayout
-                            android:id="@+id/scroll_horizontal_frutas_verduras_home_view_main_linear_layout"
-                            android:layout_width="wrap_content"
+                        android:id="@+id/scroll_horizontal_frutas_verduras_home_view_main_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <include
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal" android:baselineAligned="false">
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                         <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
-                        <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                         <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                     </LinearLayout>
 
@@ -286,63 +282,62 @@
 
 
                 <TextView
-                        android:id="@+id/titulo_mascotas_home_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:ems="10"
-                        android:inputType="text"
-                        android:text="@string/mascotas"
-                        android:textSize="30sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" tools:ignore="TextViewEdits"
-                        android:minHeight="48dp"/>
+                    android:id="@+id/titulo_mascotas_home_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:text="@string/mascotas"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextViewEdits" />
 
 
                 <HorizontalScrollView
-                        android:id="@+id/scroll_horizontal_mascotas_home_view"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                    android:id="@+id/scroll_horizontal_mascotas_home_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                        tools:ignore="MissingConstraints,ScrollViewCount">
+                    tools:ignore="MissingConstraints,ScrollViewCount">
 
 
                     <LinearLayout
-                            android:id="@+id/scroll_horizontal_mascotas_home_view_main_linear_layout"
-                            android:layout_width="wrap_content"
+                        android:id="@+id/scroll_horizontal_mascotas_home_view_main_linear_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <include
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal" android:baselineAligned="false">
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                         <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                         <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
-
-                        <include
-                                layout="@layout/producto_button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginEnd="5dp"
-                        />
+                            layout="@layout/producto_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1" />
 
                     </LinearLayout>
 
@@ -358,77 +353,76 @@
     </ScrollView>
 
     <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/container"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="UnknownId">
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scroll_home_view">
 
         <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:onClick="home"
-                android:scaleType="fitXY"
-                app:srcCompat="@mipmap/inicio"
-                tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck"/>
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:onClick="home"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/inicio"
+            tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
 
         <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="categoria"
-                android:onClick="categorias"
-                android:scaleType="fitXY"
-                tools:ignore="VisualLintBounds"
-                tools:srcCompat="@mipmap/categoria"/>
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="categoria"
+            android:onClick="categorias"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/categoria" />
 
         <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:onClick="cart"
-                android:scaleType="fitXY"
-                tools:ignore="VisualLintBounds"
-                tools:srcCompat="@mipmap/shopping"/>
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:onClick="cart"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/shopping" />
 
         <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:onClick="profile"
-                android:scaleType="fitXY"
-                tools:ignore="VisualLintBounds"
-                tools:srcCompat="@mipmap/perfil"/>
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:onClick="profile"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/perfil" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
