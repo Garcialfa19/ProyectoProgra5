@@ -5,8 +5,15 @@ import java.sql.PreparedStatement
 
 
 //**************** EN ESTA CLASE PONEMOS TODO LO QUE TENGA QUE VER CON LA TABLA CLIENTE ********************
-class ServicioCliente {
-   /* object ConexionBD{
+open class ServicioCliente {
+    fun main() {
+        var conexion=ConexionCliente.ConexionBD.connectToDatabase()
+
+        val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,"nombre1","correo1","contrasena1", 1,2)
+
+
+    }
+    /* object ConexionBD{
         fun connectToDatabase(): java.sql.Connection{
             //datos de la BD
             val url = "jdbc:mysql://localhost:3306/progra5" //si no funciona, es el nombre de la conexion //progra5 o e-Commerce

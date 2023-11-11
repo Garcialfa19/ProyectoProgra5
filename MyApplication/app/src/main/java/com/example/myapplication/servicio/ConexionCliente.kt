@@ -49,17 +49,18 @@ class ConexionCliente {
                 ps?.close()
             }
             return usuarioTO
-        }
 
-// ...
 
 
     }
 }
     fun main() {
-        var conexion=Conexion.ConexionBD.connectToDatabase()
+        var conexion=ConexionCliente.ConexionBD.connectToDatabase()
 
         val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,"nombre1","correo1","contrasena1", 1,2)
-
+        val cliente:Cliente=TODO()
+        val nombre:String= cliente.getNombre()
+        println(nombre)
 
     }
+}
