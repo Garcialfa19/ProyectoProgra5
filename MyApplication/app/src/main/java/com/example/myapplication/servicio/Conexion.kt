@@ -11,9 +11,9 @@ class Conexion {
         fun connectToDatabase(): java.sql.Connection {
             //datos de la BD
             val url =
-                "jdbc:mysql://localhost:3306/eComerce" //si no funciona, es el nombre de la conexion //progra5 o eComerce
+                "jdbc:mysql://localhost:3306/progra5" //si no funciona, es el nombre de la conexion //progra5 o eComerce
             val user = "root"
-            val password = "pp4ssw0rd" //admin o //pp4ssw0rd
+            val password = "admin" //admin o //pp4ssw0rd
 
             return DriverManager.getConnection(url, user, password)
         }
@@ -125,6 +125,6 @@ class Conexion {
 }
 fun main() {
     var conexion=Conexion.ConexionBD.connectToDatabase()
-    var listaClientes=Conexion.ConexionBD.validar(conexion, "correo1", "contrasena1")
+    var listaClientes=Conexion.ConexionBD.validar(conexion, "correo2", "contrasena2")
 
 }

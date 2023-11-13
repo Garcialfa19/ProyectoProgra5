@@ -5,8 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.util.Log
+import android.view.Window
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import com.example.myapplication.servicio.Conexion
+import com.example.myapplication.servicio.ConexionCliente
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,19 +53,54 @@ class MainActivity : AppCompatActivity() {
         val contrasena: EditText = findViewById(R.id.texto_contra_log_in_view)
 
 
-        val correo1:String = correo.getText().toString()
-        val contrasena1:String = contrasena.getText().toString()
+        var correo1: String = correo.getText().toString()
+        val contrasena1: String = contrasena.getText().toString()
 
 
         // Imprimir en la consola utilizando Log
         Log.d("MainActivity", "Correo: $correo1, Contraseña: $contrasena1")
 
-        val intent = Intent(this, Inicio::class.java)
+        /*try {
+            // Utiliza coroutines para realizar operaciones de red en un hilo secundario
+            GlobalScope.launch(Dispatchers.IO) {
+                // Esto se ejecuta en un hilo secundario
+                val conexion = Conexion.ConexionBD.connectToDatabase()
+                val usuarioTO = Conexion.ConexionBD.validar(conexion, correo1, contrasena1)
+
+                // Vuelve al hilo principal para actualizar la interfaz de usuario
+                withContext(Dispatchers.Main) {
+                    // Esto se ejecuta en el hilo principal
+                    if (usuarioTO != null) {
+                        // Inicio de sesión exitoso
+                        val listaUsuarios = Conexion.ConexionBD.getAllUsers(conexion)
+                        val intent = Intent(this@MainActivity, Inicio::class.java)
+                        startActivity(intent)
+                    } else {
+                        // Manejar el caso cuando las credenciales no son válidas
+                        // Ejemplo de Toast
+                        Toast.makeText(
+                            this@MainActivity,
+                            "Campos inválidos. La clave o correo no son correctos",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    correo1 = ""
+
+                }
+            }
+
+
+        } catch (e: Exception) {
+            withContext(Dispatchers.Main) {
+                Toast.makeText(this@MainActivity, "Error de autenticación", Toast.LENGTH_SHORT).show()
+            }
+            e.printStackTrace()
+        }*/
+        val intent = Intent(this@MainActivity, Inicio::class.java)
         startActivity(intent)
         println("Estoy en mainActivity final")
 
     }
-
 
 
     fun crearCuenta(view: View) {
