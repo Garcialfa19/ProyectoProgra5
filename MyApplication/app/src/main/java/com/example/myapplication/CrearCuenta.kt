@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.servicio.Conexion
 import com.example.myapplication.servicio.ConexionCliente
 
 class CrearCuenta : AppCompatActivity()  {
@@ -19,7 +18,7 @@ class CrearCuenta : AppCompatActivity()  {
 
     fun registrar(view: View){
         println("estoy en metodo registrar")
-        val intent= Intent(this,MainActivity::class.java).apply { }
+        val intent= Intent(this, MainActivity::class.java).apply { }
         startActivity(intent)
 
         val nombre: EditText = findViewById(R.id.textNombreR)
