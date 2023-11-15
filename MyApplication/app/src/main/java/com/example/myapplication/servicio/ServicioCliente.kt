@@ -44,8 +44,6 @@ open class ServicioCliente {
                     )
                     clientes.add(cliente)
                     println(nombre)
-                    statement.close()
-                    resultSet.close()
                 }
                 statement.close()
                 resultSet.close()
@@ -56,21 +54,21 @@ open class ServicioCliente {
                 println(e.message)
                 ArrayList()
             }
+            /*
             finally {
                 con.close()
-            }
+            }*/
         }
 
         fun validar(correo: String, contrasena: String): Boolean {
             var sql = "SELECT * FROM cliente where correo=? and contrasena=?"
             var usuarioTO: Cliente? = null
             var ps: PreparedStatement? = null
+
             return try {
                 ps = con.prepareStatement(sql)
-
                 ps.setString(1, correo)
                 ps.setString(2, contrasena)
-
                 var resultSet = ps.executeQuery()
                 //si entra en el IF es porque obtuvo un resultado
                 if (resultSet.next()) {
@@ -115,9 +113,10 @@ open class ServicioCliente {
                 println(e.message)
                 false
             }
+            /*
             finally {
                 con.close()
-            }
+            }*/
         }
 
         fun agregarUsuario(
