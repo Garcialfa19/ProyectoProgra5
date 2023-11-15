@@ -82,7 +82,7 @@
         android:layout_height="50dp"
         android:background="@drawable/roundstyle"
         android:backgroundTint="#D8D3D3"
-        android:hint="@string/usuario"
+        android:hint="Correo"
         android:inputType="textEmailAddress"
         android:paddingStart="10dp"
         app:errorEnabled="true"

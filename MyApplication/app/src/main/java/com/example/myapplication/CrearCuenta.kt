@@ -6,7 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.servicio.ConexionCliente
+import com.example.myapplication.servicio.ServicioCliente
 
 class CrearCuenta : AppCompatActivity()  {
 
@@ -39,10 +39,10 @@ class CrearCuenta : AppCompatActivity()  {
         // Imprimir en la consola utilizando Log
         Log.d("Registrar", "Nombre: $nombre1,Correo: $correo1, Contraseña: $contrasena1,Telefono:$telefono1 ")
         //llega hasta aca
-        var conexion= ConexionCliente.ConexionBD.connectToDatabase()
+        var conexion= ServicioCliente.ConexionBD
         println("inicio conexion")
         //val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,nombre1,correo1,contrasena1, 1,telefono1)
-        val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,nombre1,correo1,contrasena1, 1,telefono1)
+        val agregar=ServicioCliente.ConexionBD.agregarUsuario(nombre1,correo1,contrasena1, 1,telefono1)
         println("final conexion")
     }
 

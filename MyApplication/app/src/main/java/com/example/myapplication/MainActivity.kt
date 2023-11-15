@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import com.example.myapplication.servicio.ServicioCliente
 
 public class MainActivity : AppCompatActivity() {
 
@@ -38,8 +39,10 @@ public class MainActivity : AppCompatActivity() {
         println("Correo: $correoStr")
         println("Contraseña: $contrasenaStr")
 
+        var con=ServicioCliente.ConexionBD
+
         // For now, I'll just print a message indicating a successful login.
-        if (validarUsuarioYContrasena(correoStr, contrasenaStr)) {
+        if (con.validar(correoStr, contrasenaStr)) {
             Log.d("com.example.myapplication.MainActivity", "Login successful")
             val intent = Intent(this, Inicio::class.java)
             startActivity(intent)
@@ -48,11 +51,6 @@ public class MainActivity : AppCompatActivity() {
             // Display an error message or handle unsuccessful login
             Log.d("com.example.myapplication.MainActivity", "Login failed")
         }
-    }
-
-    private fun validarUsuarioYContrasena(usuario: String, contrasena: String): Boolean {
-        // For now, I'm just returning true to simulate a successful login.
-        return true
     }
 
     fun crearCuenta(view: View) {
