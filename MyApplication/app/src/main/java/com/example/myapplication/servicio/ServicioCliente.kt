@@ -1,11 +1,12 @@
 package com.example.myapplication.servicio
+import android.util.Log
 import com.example.myapplication.modelo.Cliente
 import java.sql.DriverManager
 import java.sql.PreparedStatement
 import java.sql.SQLException
 
 
-//**************** EN ESTA CLASE PONEMOS TODO LO QUE TENGA QUE VER CON LA TABLA CLIENTE ********************
+//**************** EN ESTA CLASE PONEMOS TOD O LO QUE TENGA QUE VER CON LA TABLA CLIENTE ********************
 open class ServicioCliente {
     object ConexionBD:Conexion() {
         fun getAllUsers(): ArrayList<Cliente> {
@@ -62,7 +63,6 @@ open class ServicioCliente {
 
         fun validar(correo: String, contrasena: String): Boolean {
             var sql = "SELECT * FROM cliente where correo=? and contrasena=?"
-            var usuarioTO: Cliente? = null
             var ps: PreparedStatement? = null
 
             return try {
@@ -100,6 +100,8 @@ open class ServicioCliente {
                         telefono
                     )
                     println("usuario reconocido")
+                    println(cliente.getNombre())
+                    cliente
                     resultSet.close()
                     true
                 }
@@ -144,15 +146,21 @@ open class ServicioCliente {
                 usuarioTO = Cliente(nombre, correo, contrasena, tipo, telefono)
             } catch (e: Exception) {
                 e.printStackTrace()
+                // Log the exception details
+                Log.e("AgregarUsuario", "Error adding user: ${e.message}")
             } finally {
                 ps?.close()
             }
             return usuarioTO
         }
+
     }
 }
 fun main() {
-    var cliente=ServicioCliente.ConexionBD.validar("correo1", "contrasena1")
-    var test=ServicioCliente.ConexionBD.getAllUsers()
-}
+    var validarCliente=ServicioCliente.ConexionBD.validar("david@garcia.com", "passwrd")
+    //println(validarCliente)
 
+    //var crearUsuario = ServicioCliente.ConexionBD.agregarUsuario("Jean","Jean", "Jean", 1, 123)
+
+   // var getUsers=ServicioCliente.ConexionBD.getAllUsers()
+}

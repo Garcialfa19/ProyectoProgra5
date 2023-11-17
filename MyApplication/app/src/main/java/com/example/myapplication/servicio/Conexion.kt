@@ -1,10 +1,7 @@
 package com.example.myapplication.servicio
 
-import com.example.myapplication.modelo.Cliente
 import java.sql.DriverManager
-import java.sql.Connection
-import java.sql.PreparedStatement
-import java.sql.SQLException
+
 
 open class Conexion {
     //**************************************     ESTA CLASE SOLO SE USA PARA ESTABLECER LA CONEXION       ************************************************

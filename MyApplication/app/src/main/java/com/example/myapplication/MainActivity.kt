@@ -10,7 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import com.example.myapplication.servicio.ServicioCliente
 
-public class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var correo: EditText
     private lateinit var contrasena: EditText
@@ -27,7 +27,8 @@ public class MainActivity : AppCompatActivity() {
         val btn: Button = findViewById(R.id.btn_inicio_log_in_view)
 
         btn.setOnClickListener {
-            validarCredenciales()
+            val intent = Intent(this, Inicio::class.java)
+            startActivity(intent)
         }
     }
 
