@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun login(view: View) {
-        val url = "http://192.168.0.105/ecomerce/login.php"
+        val url = "http://10.23.4.140/ecomerce/login.php"
 
         val queue = Volley.newRequestQueue(this)
 

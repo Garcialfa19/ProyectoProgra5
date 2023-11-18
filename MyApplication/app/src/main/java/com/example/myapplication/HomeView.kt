@@ -14,10 +14,15 @@ class HomeView : AppCompatActivity() {
     }
 
 
-
     fun home(view: View) {
         val intent = Intent(this, Inicio::class.java)
         startActivity(intent)
+
+        
+
+
+
+
     }
 
 
