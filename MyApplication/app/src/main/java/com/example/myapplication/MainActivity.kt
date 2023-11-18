@@ -68,10 +68,12 @@ class MainActivity : AppCompatActivity() {
                         val clienteJson = jsonResponse.getJSONObject("cliente")
 
                         // You can use the client data as needed
+                        val nombre=clienteJson.getString("nombre")
+                        println(nombre)
 
                         // Start the new activity
                         val intent = Intent(this, Inicio::class.java)
-                        intent.putExtra("correo", correoText.toString())
+                        intent.putExtra("nombre", correoText.toString())
                         startActivity(intent)
                     } else {
                         // Authentication failed
