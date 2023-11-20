@@ -39,6 +39,10 @@ class Cliente {
         this.tipo=tipo
     }
 
+    constructor(){
+
+    }
+
     fun setIdUsuario(idUsuario: Int){
         this.idUsuario= idUsuario
     }

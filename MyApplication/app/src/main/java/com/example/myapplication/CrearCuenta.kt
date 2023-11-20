@@ -4,58 +4,65 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.servicio.ConexionCliente
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 
-class CrearCuenta : AppCompatActivity()  {
+class CrearCuenta : AppCompatActivity() {
+
+    var nombre: EditText? = null
+    var correo: EditText? = null
+    var contrasena: EditText? = null
+    var telefono: EditText? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_view)
-        println("estoy en aqui")
+
+        nombre = findViewById(R.id.textNombreR)
+        correo = findViewById(R.id.textCorreoR)
+        contrasena = findViewById(R.id.textContrasenaR)
+        telefono = findViewById(R.id.textTelR)
+
+        val btn: Button = findViewById(R.id.btnRegistro)
+
+        btn.setOnClickListener {
+            registrar(it)
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
-    fun registrar(view: View){
-        println("estoy en metodo registrar")
-        val intent= Intent(this, MainActivity::class.java).apply { }
-        startActivity(intent)
+    fun registrar(view: View) {
+        val url = "http://192.168.0.105/ecomerce/insertar.php"
 
-        val nombre: EditText = findViewById(R.id.textNombreR)
-        val correo: EditText = findViewById(R.id.textCorreoR)
-        val contrasena: EditText = findViewById(R.id.textContrasenaR)
-        val telefono: EditText = findViewById(R.id.textTelR)
+        //Log the URL
+        Log.d("URL_LOG", "Request URL: $url")
 
-
-
-        val nombre1:String = nombre.getText().toString()
-        val correo1:String = correo.getText().toString()
-        val contrasena1:String = contrasena.getText().toString()
-        val telefono1:Int = telefono.getText().toString().toInt()
-
-
-
-
-        // Imprimir en la consola utilizando Log
-        Log.d("Registrar", "Nombre: $nombre1,Correo: $correo1, Contraseña: $contrasena1,Telefono:$telefono1 ")
-        //llega hasta aca
-        var conexion= ConexionCliente.ConexionBD.connectToDatabase()
-        println("inicio conexion")
-        //val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,nombre1,correo1,contrasena1, 1,telefono1)
-        val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,nombre1,correo1,contrasena1, 1,telefono1)
-        println("final conexion")
+        val queue = Volley.newRequestQueue(this)
+        var resultadoPost = object : StringRequest(
+            Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                Toast.makeText(this, "Usuario Insertado exitosamente", Toast.LENGTH_LONG).show()
+            }, Response.ErrorListener { error ->
+                // Step 6: Log detailed error information
+                Log.e("VOLLEY_ERROR", "Error: ${error.networkResponse?.statusCode}", error)
+                Toast.makeText(this, "Error ${error.networkResponse?.statusCode}", Toast.LENGTH_LONG).show()
+            }) {
+            override fun getParams(): MutableMap<String, String>? {
+                val parametros = HashMap<String, String>()
+                parametros.put("nombre", nombre?.text.toString())
+                parametros.put("correo", correo?.text.toString())
+                parametros.put("contrasena", contrasena?.text.toString())
+                parametros.put("telefono", telefono?.text.toString())
+                return parametros
+            }
+        }
+        queue.add(resultadoPost)
     }
-
-
 }
-/*
-fun main() {
-    // Imprimir en la consola utilizando Log
-    //Log.d("Registrar", "Nombre: $nombre1,Correo: $correo1, Contraseña: $contrasena1,Telefono:$telefono1 ")
-    //llega hasta aca
-    var conexion= ConexionCliente.ConexionBD.connectToDatabase()
-    println("inicio conexion")
-    //val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,nombre1,correo1,contrasena1, 1,telefono1)
-    val agregar=ConexionCliente.ConexionBD.agregarUsuario(conexion,nombre1,correo1,contrasena1, 1,telefono1)
-    println("final conexion")
-}*/
