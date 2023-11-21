@@ -361,7 +361,7 @@
         app:layout_constraintTop_toBottomOf="@id/scroll_home_view">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/BtnHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -376,7 +376,7 @@
             />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/BtnCategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -384,13 +384,13 @@
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:contentDescription="categoria"
-            android:onClick="home"
+            android:onClick="categorias"
             android:scaleType="fitXY"
             tools:ignore="VisualLintBounds"
             android:src="@mipmap/categoria" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/BtnCarrito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -405,7 +405,7 @@
             android:src="@mipmap/shopping" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/BtnPerfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"

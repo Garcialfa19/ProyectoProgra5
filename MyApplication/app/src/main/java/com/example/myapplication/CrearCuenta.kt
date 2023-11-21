@@ -39,7 +39,7 @@ class CrearCuenta : AppCompatActivity() {
     }
 
     fun registrar(view: View) {
-        val url = "http://192.168.0.105/ecomerce/insertar.php"
+        val url = "http://192.168.1.19/ecomerce/insertar.php" //Naryery:192.168.1.19 //David:192.168.0.105
 
         //Log the URL
         Log.d("URL_LOG", "Request URL: $url")

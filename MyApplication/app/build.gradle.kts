@@ -39,7 +39,7 @@ dependencies {
     implementation("com.google.android.material:material:1.8.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
-    implementation ("mysql:mysql-connector-java:8.0.28")
+    implementation ("mysql:mysql-connector-java:8.0.23") // Asegúrate de que coincida con la versión que necesitas
     implementation("com.android.volley:volley:1.2.1")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
