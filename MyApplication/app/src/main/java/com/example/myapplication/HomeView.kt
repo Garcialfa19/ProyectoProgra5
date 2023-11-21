@@ -13,9 +13,12 @@ class HomeView : AppCompatActivity() {
 
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 419e83204421110b2f0ce5f880255236c53369e1
     fun home(view: View) {
-        val intent = Intent(this, Inicio::class.java)
+        val intent = Intent(this, HomeView::class.java)
         startActivity(intent)
 
         
@@ -25,22 +28,20 @@ class HomeView : AppCompatActivity() {
 
     }
 
-
-
     fun categorias(view: View) {
-        val intent = Intent(this, categorias::class.java)
+        val intent = Intent(this, Categoria::class.java)
         startActivity(intent)
     }
 
-    // tengo que crear otra clase que lleve a cart view
+    //
     fun cart(view: View) {
-        val intent = Intent(this, CrearCuenta::class.java)
+        val intent = Intent(this, Carrito::class.java)
         startActivity(intent)
     }
 
-    // tengo que crear otra clase que lleve a profile view
+    //
     fun profile(view: View) {
-        val intent = Intent(this, CrearCuenta::class.java)
+        val intent = Intent(this, Perfil::class.java)
         startActivity(intent)
     }
 }

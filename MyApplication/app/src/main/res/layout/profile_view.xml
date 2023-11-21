@@ -1,228 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Perfil">
 
     <!--Main linear layout that contains everithing. Everithing in this layout has to be inside of this layout to avid error-->
 
     <LinearLayout
-            android:id="@+id/mainLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="MissingConstraints"
-            android:orientation="vertical">
-
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
 
         <!--Page Title-->
         <TextView
-                android:id="@+id/textNomUsuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Nombre del Usuario"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+            android:id="@+id/textNomUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Nombre del Usuario"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <!--Cupones main layout-->
         <LinearLayout
-                android:id="@+id/cupones_container_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingConstraints"
-                android:orientation="horizontal">
-
+            android:id="@+id/cupones_container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
 
 
             <Button
-                    android:id="@+id/CuponesButton"
-                    android:layout_width="320dp"
-                    android:layout_height="72dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="@color/light_gray"
-                    android:text="25,000"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:textAlignment="textStart"/>
+                android:id="@+id/CuponesButton"
+                android:layout_width="320dp"
+                android:layout_height="72dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/light_gray"
+                android:text="25,000"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <ImageView
-                    android:id="@+id/CuponesImage"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    app:srcCompat="@android:drawable/btn_star_big_on"
-                    tools:ignore="ExtraText"/>
+                android:id="@+id/CuponesImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@android:drawable/btn_star_big_on"
+                tools:ignore="ExtraText" />
 
         </LinearLayout>
 
 
         <!--Direcciones layout-->
         <LinearLayout
-                android:id="@+id/direcciones_container_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingConstraints"
-                android:orientation="horizontal"
-                android:gravity="center_horizontal"
-        >
+            android:id="@+id/direcciones_container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
 
             <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:background="@drawable/roundstyle"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@android:drawable/btn_star_big_on"/>
+                android:id="@+id/imageView3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/roundstyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
 
 
             <Button
-                    android:id="@+id/button"
-                    android:layout_width="match_parent"
-                    android:layout_height="72dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="@color/light_gray"
-                    android:text="Direcciones de entrega"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/light_gray"
+                android:text="Direcciones de entrega"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
 
         <!--tarjetas layout-->
         <LinearLayout
-                android:id="@+id/pago_container_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingConstraints"
-                android:orientation="horizontal">
+            android:id="@+id/pago_container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
 
             <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@android:drawable/btn_star_big_on"/>
+                android:id="@+id/imageView4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
 
             <Button
-                    android:id="@+id/button2"
-                    android:layout_width="match_parent"
-                    android:layout_height="72dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="@color/light_gray"
-                    android:text="Métodos de pago"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/light_gray"
+                android:text="Métodos de pago"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-            android:id="@+id/bottomBar"
-            android:layout_width="413dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/container"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="UnknownId">
+        android:id="@+id/bottomBar"
+        android:layout_width="413dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container"
+        tools:ignore="UnknownId">
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                app:srcCompat="@mipmap/inicio"
-                tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck"/>
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/inicio"
+            tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                tools:ignore="VisualLintBounds"
-                tools:srcCompat="@mipmap/categoria"/>
+            android:id="@+id/imageButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/categoria" />
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                tools:ignore="VisualLintBounds"
-                tools:srcCompat="@mipmap/shopping"/>
+            android:id="@+id/imageButton3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/shopping" />
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                tools:ignore="VisualLintBounds"
-                tools:srcCompat="@mipmap/perfil"/>
+            android:id="@+id/imageButton4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/perfil" />
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,169 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Categoria">
 
 
     <LinearLayout
-            android:id="@+id/mainLayout"
-            android:layout_width="match_parent"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="VisualLintBounds">
+
+        <TextView
+            android:id="@+id/textNomCategoria"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/categorias"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="VisualLintBounds">
-
-        <TextView
-                android:id="@+id/textNomCategoria"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:text="@string/categorias"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <GridLayout
-                android:id="@+id/gridLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="0dp"
-                android:columnCount="4"
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:columnCount="4"
+            android:gravity="center">
+
+            <include
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:gravity="center">
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
             <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
-
-            <include
-                    layout="@layout/categoria_button"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="center"/>
+                layout="@layout/categoria_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp" />
 
         </GridLayout>
 
@@ -172,85 +173,85 @@
 
 
     <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="413dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/container"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="UnknownId">
+        android:id="@+id/linearLayout"
+        android:layout_width="413dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container"
+        tools:ignore="UnknownId">
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                app:srcCompat="@mipmap/inicio"
-                tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck"/>
+            android:id="@+id/imageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/inicio"
+            tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                tools:ignore="VisualLintBounds"
-                tools:srcCompat="@mipmap/categoria"/>
+            android:id="@+id/imageButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/categoria" />
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
-                android:id="@+id/imageButton3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                tools:ignore="VisualLintBounds"
-                tools:srcCompat="@mipmap/shopping"/>
+            android:id="@+id/imageButton3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/shopping" />
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
         <ImageButton
-                android:id="@+id/imageButton4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:adjustViewBounds="true"
-                android:background="@color/white"
-                android:contentDescription="@string/app_name"
-                android:scaleType="fitXY"
-                tools:ignore="VisualLintBounds"
-                tools:srcCompat="@mipmap/perfil"/>
+            android:id="@+id/imageButton4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:ignore="VisualLintBounds"
+            tools:srcCompat="@mipmap/perfil" />
 
         <Space
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"/>
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
     </LinearLayout>
 

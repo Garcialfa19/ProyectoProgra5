@@ -12,7 +12,6 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.myapplication.modelo.Cliente
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -38,7 +37,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun login(view: View) {
+<<<<<<< HEAD
         val url = "http://10.23.4.140/ecomerce/login.php"
+=======
+        val url = "http://192.168.1.19/ecomerce/login.php" //Naryery:192.168.1.19 //David:192.168.0.105
+>>>>>>> 419e83204421110b2f0ce5f880255236c53369e1
 
         val queue = Volley.newRequestQueue(this)
 
@@ -69,24 +72,13 @@ class MainActivity : AppCompatActivity() {
                         val clienteJson = jsonResponse.getJSONObject("cliente")
 
                         // You can use the client data as needed
-                        val id=clienteJson.getInt("idUsuario")
                         val nombre=clienteJson.getString("nombre")
-                        val correo=clienteJson.getString("correo")
-                        val contrasena=clienteJson.getString("contrasena")
-                        val categoria=clienteJson.getString("categoria")
-                        val montoAcumulado=clienteJson.getDouble("montoAcumulado").toFloat()
-                        val direccion=clienteJson.getString("direccion")
-                        val metodoDePago=clienteJson.getString("metodoDePago")
-                        val tipo=clienteJson.getInt("tipo")
-                        val cupones=clienteJson.getInt("cupones")
-                        val carrito=clienteJson.getInt("carrito")
-                        val telefono=clienteJson.getInt("telefono")
-                        val cliente= Cliente(id,nombre,correo,contrasena,categoria,montoAcumulado,direccion,metodoDePago,tipo,cupones,carrito,telefono)
+                        println(nombre)
 
                         // Start the new activity
-//                        val intent = Intent(this, Inicio::class.java)
-//                        intent.putExtra( "cliente",cliente )
-//                        startActivity(intent)
+                        val intent = Intent(this, Inicio::class.java)
+                        intent.putExtra("nombre", correoText.toString())
+                        startActivity(intent)
                     } else {
                         // Authentication failed
                         val message = jsonResponse.getString("message")
