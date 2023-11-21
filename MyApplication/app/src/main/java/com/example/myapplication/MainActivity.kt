@@ -12,6 +12,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.myapplication.modelo.Cliente
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -68,13 +69,24 @@ class MainActivity : AppCompatActivity() {
                         val clienteJson = jsonResponse.getJSONObject("cliente")
 
                         // You can use the client data as needed
+                        val id=clienteJson.getInt("idUsuario")
                         val nombre=clienteJson.getString("nombre")
-                        println(nombre)
+                        val correo=clienteJson.getString("correo")
+                        val contrasena=clienteJson.getString("contrasena")
+                        val categoria=clienteJson.getString("categoria")
+                        val montoAcumulado=clienteJson.getDouble("montoAcumulado").toFloat()
+                        val direccion=clienteJson.getString("direccion")
+                        val metodoDePago=clienteJson.getString("metodoDePago")
+                        val tipo=clienteJson.getInt("tipo")
+                        val cupones=clienteJson.getInt("cupones")
+                        val carrito=clienteJson.getInt("carrito")
+                        val telefono=clienteJson.getInt("telefono")
+                        val cliente= Cliente(id,nombre,correo,contrasena,categoria,montoAcumulado,direccion,metodoDePago,tipo,cupones,carrito,telefono)
 
                         // Start the new activity
-                        val intent = Intent(this, Inicio::class.java)
-                        intent.putExtra("nombre", correoText.toString())
-                        startActivity(intent)
+//                        val intent = Intent(this, Inicio::class.java)
+//                        intent.putExtra( "cliente",cliente )
+//                        startActivity(intent)
                     } else {
                         // Authentication failed
                         val message = jsonResponse.getString("message")
