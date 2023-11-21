@@ -13,19 +13,9 @@ class HomeView : AppCompatActivity() {
 
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 419e83204421110b2f0ce5f880255236c53369e1
     fun home(view: View) {
         val intent = Intent(this, HomeView::class.java)
         startActivity(intent)
-
-        
-
-
-
-
     }
 
     fun categorias(view: View) {
@@ -39,7 +29,7 @@ class HomeView : AppCompatActivity() {
         startActivity(intent)
     }
 
-    //
+
     fun profile(view: View) {
         val intent = Intent(this, Perfil::class.java)
         startActivity(intent)

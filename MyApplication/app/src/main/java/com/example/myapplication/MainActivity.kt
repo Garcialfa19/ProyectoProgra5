@@ -37,11 +37,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun login(view: View) {
-<<<<<<< HEAD
-        val url = "http://10.23.4.140/ecomerce/login.php"
-=======
-        val url = "http://192.168.1.19/ecomerce/login.php" //Naryery:192.168.1.19 //David:192.168.0.105
->>>>>>> 419e83204421110b2f0ce5f880255236c53369e1
+
+        val ipAddress = "192.168.0.103"  // Cambiar la ip aquií
+        val url = "http://$ipAddress/ecomerce/login.php"
 
         val queue = Volley.newRequestQueue(this)
 
@@ -72,13 +70,13 @@ class MainActivity : AppCompatActivity() {
                         val clienteJson = jsonResponse.getJSONObject("cliente")
 
                         // You can use the client data as needed
-                        val nombre=clienteJson.getString("nombre")
+                        val nombre = clienteJson.getString("nombre")
                         println(nombre)
 
                         // Start the new activity
                         val intent = Intent(this, Inicio::class.java)
-                        intent.putExtra("nombre", correoText.toString())
                         startActivity(intent)
+
                     } else {
                         // Authentication failed
                         val message = jsonResponse.getString("message")
@@ -93,7 +91,11 @@ class MainActivity : AppCompatActivity() {
             { error ->
                 // Handle error
                 Log.e("VOLLEY_ERROR", "Error: ${error.networkResponse?.statusCode}", error)
-                Toast.makeText(this, "Error ${error.networkResponse?.statusCode}", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    "Error ${error.networkResponse?.statusCode}",
+                    Toast.LENGTH_LONG
+                ).show()
             })
 
         queue.add(stringRequest)

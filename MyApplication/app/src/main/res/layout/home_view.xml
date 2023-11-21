@@ -354,9 +354,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/scroll_home_view">
 
@@ -372,8 +372,7 @@
             android:contentDescription="@string/app_name"
             android:onClick="home"
             android:scaleType="fitXY"
-            android:src="@mipmap/inicio"
-            />
+            android:src="@mipmap/inicio" />
 
         <ImageButton
             android:id="@+id/BtnCategoria"
@@ -386,8 +385,8 @@
             android:contentDescription="categoria"
             android:onClick="categorias"
             android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            android:src="@mipmap/categoria" />
+            android:src="@mipmap/categoria"
+            tools:ignore="VisualLintBounds" />
 
         <ImageButton
             android:id="@+id/BtnCarrito"
@@ -401,8 +400,8 @@
             android:contentDescription="@string/app_name"
             android:onClick="cart"
             android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            android:src="@mipmap/shopping" />
+            android:src="@mipmap/shopping"
+            tools:ignore="VisualLintBounds" />
 
         <ImageButton
             android:id="@+id/BtnPerfil"
@@ -416,8 +415,8 @@
             android:contentDescription="@string/app_name"
             android:onClick="profile"
             android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            android:src="@mipmap/perfil" />
+            android:src="@mipmap/perfil"
+            tools:ignore="VisualLintBounds" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
