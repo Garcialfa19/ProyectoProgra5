@@ -50,7 +50,6 @@
         android:layout_height="57dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/roundstyle"
         android:text="Finalizar Compra"
         android:textAllCaps="false"
@@ -58,92 +57,74 @@
         android:textStyle="bold"
         app:backgroundTint="@color/green"
         app:cornerRadius="@android:dimen/app_icon_size"
-        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 
     <LinearLayout
-        android:id="@+id/bottomBar"
-        android:layout_width="413dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container"
-        tools:ignore="UnknownId">
-
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+        >
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/BtnHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            app:srcCompat="@mipmap/inicio"
-            tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
 
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+            android:onClick="homeCarrito"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/inicio" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/BtnCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/categoria" />
 
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+            android:onClick="categoriasCarrito"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/categoria" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/BtnCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/shopping" />
 
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+            android:onClick="cartCarrito"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/shopping" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/BtnPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/perfil" />
 
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
-
+            android:onClick="profileCarrito"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/perfil" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

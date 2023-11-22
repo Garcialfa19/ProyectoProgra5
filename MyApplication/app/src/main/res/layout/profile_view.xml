@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
@@ -139,85 +139,84 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/bottomBar"
-        android:layout_width="413dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container"
-        tools:ignore="UnknownId">
-
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/BtnHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            app:srcCompat="@mipmap/inicio"
-            tools:ignore="VisualLintBounds,DuplicateSpeakableTextCheck" />
 
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+            android:onClick="homePerfil"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/inicio" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/BtnCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/categoria" />
 
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+            android:onClick="categoriasPerfil"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/categoria" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/BtnCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/shopping" />
 
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
+            android:onClick="cartPerfil"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/shopping" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:id="@+id/BtnPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:background="@color/white"
             android:contentDescription="@string/app_name"
-            android:scaleType="fitXY"
-            tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/perfil" />
-
-        <Space
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_weight="1" />
-
+            android:onClick="profilePerfil"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/perfil" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:background="@drawable/roundstyle"
+        android:text="Cerrar Sesión"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/boton"
+        app:cornerRadius="@android:dimen/app_icon_size"
+        android:onClick="cerrarSesionPerfil"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainLayout"
+        app:layout_constraintVertical_bias="0.899" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -368,10 +368,9 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-
             android:contentDescription="@string/app_name"
             android:onClick="home"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:src="@mipmap/inicio" />
 
         <ImageButton
@@ -382,11 +381,11 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:contentDescription="categoria"
+            android:contentDescription="@string/app_name"
             android:onClick="categorias"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:src="@mipmap/categoria"
-            tools:ignore="VisualLintBounds" />
+             />
 
         <ImageButton
             android:id="@+id/BtnCarrito"
@@ -396,12 +395,11 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-
             android:contentDescription="@string/app_name"
             android:onClick="cart"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:src="@mipmap/shopping"
-            tools:ignore="VisualLintBounds" />
+            />
 
         <ImageButton
             android:id="@+id/BtnPerfil"
@@ -411,12 +409,11 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-
             android:contentDescription="@string/app_name"
             android:onClick="profile"
-            android:scaleType="fitXY"
+            android:scaleType="fitCenter"
             android:src="@mipmap/perfil"
-            tools:ignore="VisualLintBounds" />
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

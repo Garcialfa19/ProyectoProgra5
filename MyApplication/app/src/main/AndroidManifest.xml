@@ -25,47 +25,22 @@
         </activity>
         <activity
             android:name=".Inicio"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
+            />
         <activity
             android:name=".CrearCuenta"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
+            />
         <activity
             android:name=".HomeView"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-            </intent-filter>
-        </activity>
+            />
         <activity
             android:name=".Categoria"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
+        />
         <activity
             android:name=".Carrito"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
+        />
         <activity
             android:name=".Perfil"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
+            />
 
     </application>
 
