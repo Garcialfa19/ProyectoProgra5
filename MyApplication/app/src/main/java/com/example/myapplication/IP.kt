@@ -1,6 +1,8 @@
 import java.net.InetAddress
 import java.net.NetworkInterface
 
+class IP {
+
 fun getIpv4Address(): String {
     var ipv4Address = "Unknown"
 
@@ -28,4 +30,5 @@ fun getIpv4Address(): String {
 fun main() {
     val ipv4Address = getIpv4Address()
     println("Device IPv4 Address: $ipv4Address")
+}
 }
