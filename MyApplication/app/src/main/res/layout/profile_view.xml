@@ -38,6 +38,7 @@
             android:id="@+id/cupones_container_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
@@ -60,7 +61,8 @@
                 android:id="@+id/CuponesImage"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                app:srcCompat="@android:drawable/btn_star_big_on"
+                android:layout_marginEnd="5dp"
+                android:src="@mipmap/cash"
                 tools:ignore="ExtraText" />
 
         </LinearLayout>
@@ -79,12 +81,13 @@
                 android:id="@+id/imageView3"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:layout_marginStart="5dp"
                 android:background="@drawable/roundstyle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/btn_star_big_on" />
+                android:src="@mipmap/mapa" />
 
 
             <Button
@@ -115,11 +118,12 @@
                 android:id="@+id/imageView4"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
+                android:layout_marginStart="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/btn_star_big_on" />
+                android:src="@mipmap/tarjeta"/>
 
             <Button
                 android:id="@+id/button2"
@@ -138,10 +142,32 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/roundstyle"
+        android:text="Cerrar Sesión"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:cornerRadius="@android:dimen/app_icon_size"
+        android:onClick="cerrarSesionPerfil"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainLayout"
+        app:layout_constraintVertical_bias="0.899" />
+
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
@@ -154,10 +180,10 @@
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
-
             android:onClick="homePerfil"
             android:scaleType="fitCenter"
-            android:src="@mipmap/inicio" />
+            android:src="@mipmap/inicio_g"
+            android:backgroundTint="@color/white"/>
 
         <ImageButton
             android:id="@+id/BtnCategoria"
@@ -171,7 +197,8 @@
 
             android:onClick="categoriasPerfil"
             android:scaleType="fitCenter"
-            android:src="@mipmap/categoria" />
+            android:src="@mipmap/categoria_g"
+            android:backgroundTint="@color/white" />
 
         <ImageButton
             android:id="@+id/BtnCarrito"
@@ -185,7 +212,8 @@
 
             android:onClick="cartPerfil"
             android:scaleType="fitCenter"
-            android:src="@mipmap/shopping" />
+            android:src="@mipmap/shopping_g"
+            android:backgroundTint="@color/white" />
 
         <ImageButton
             android:id="@+id/BtnPerfil"
@@ -198,25 +226,8 @@
             android:contentDescription="@string/app_name"
             android:onClick="profilePerfil"
             android:scaleType="fitCenter"
-            android:src="@mipmap/perfil" />
+            android:src="@mipmap/profile"
+            android:backgroundTint="@color/white" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
-        android:background="@drawable/roundstyle"
-        android:text="Cerrar Sesión"
-        android:textAllCaps="false"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/boton"
-        app:cornerRadius="@android:dimen/app_icon_size"
-        android:onClick="cerrarSesionPerfil"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainLayout"
-        app:layout_constraintVertical_bias="0.899" />
 </androidx.constraintlayout.widget.ConstraintLayout>

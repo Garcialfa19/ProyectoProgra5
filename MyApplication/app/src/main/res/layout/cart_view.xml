@@ -65,7 +65,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         >
@@ -79,10 +79,10 @@
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
-
             android:onClick="homeCarrito"
             android:scaleType="fitCenter"
-            android:src="@mipmap/inicio" />
+            android:src="@mipmap/inicio_g"
+            android:backgroundTint="@color/white"/>
 
         <ImageButton
             android:id="@+id/BtnCategoria"
@@ -93,10 +93,10 @@
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
-
             android:onClick="categoriasCarrito"
             android:scaleType="fitCenter"
-            android:src="@mipmap/categoria" />
+            android:src="@mipmap/categoria_g"
+            android:backgroundTint="@color/white"/>
 
         <ImageButton
             android:id="@+id/BtnCarrito"
@@ -107,10 +107,10 @@
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
-
             android:onClick="cartCarrito"
             android:scaleType="fitCenter"
-            android:src="@mipmap/shopping" />
+            android:src="@mipmap/shopping"
+            android:backgroundTint="@color/white"/>
 
         <ImageButton
             android:id="@+id/BtnPerfil"
@@ -121,10 +121,10 @@
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
-
             android:onClick="profileCarrito"
             android:scaleType="fitCenter"
-            android:src="@mipmap/perfil" />
+            android:src="@mipmap/profile_g"
+            android:backgroundTint="@color/white"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
