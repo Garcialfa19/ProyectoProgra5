@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:backgroundTint="@color/white"
         android:padding="0dp"
-        android:src="@mipmap/cuidado_personal" />
+        android:src="@mipmap/personal" />
 
 
     <TextView
