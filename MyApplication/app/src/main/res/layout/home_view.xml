@@ -53,14 +53,14 @@
 
                 <!-- esto se debería de cambiar pero no es prioridad -->
                 <include
-                    layout="@layout/categoria_licores_button"
+                    layout="@layout/bebidas_button"
                     android:layout_width="85dp"
                     android:layout_height="125dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp" />
 
                 <include
-                    layout="@layout/categoria_farmacia_button"
+                    layout="@layout/snacks"
                     android:layout_width="85dp"
                     android:layout_height="125dp"
                     android:layout_marginStart="10dp"

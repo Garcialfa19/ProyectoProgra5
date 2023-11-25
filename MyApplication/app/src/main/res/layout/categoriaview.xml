@@ -47,7 +47,27 @@
             android:gravity="center">
 
             <include
-                layout="@layout/categoria_button"
+                android:id="@+id/btn01"
+                layout="@layout/abarrotes_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/bebidas" />
+
+            <include
+                android:id="@+id/btn02"
+                layout="@layout/bebes_button"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <include
+                layout="@layout/bebidas_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -55,7 +75,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/carnes_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -63,7 +83,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/congelados_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -71,7 +91,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/cuidado_personal_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -79,7 +99,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/frutas_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -87,7 +107,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/lacteos_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -95,7 +115,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/limpieza_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -103,7 +123,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/mascotas_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -111,7 +131,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/panaderia_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -119,7 +139,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/snacks"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -127,44 +147,15 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/categoria_button"
+                layout="@layout/hogar_button"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp" />
 
-            <include
-                layout="@layout/categoria_button"
-                android:layout_width="85dp"
-                android:layout_height="125dp"
-                android:layout_columnWeight="1"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp" />
 
-            <include
-                layout="@layout/categoria_button"
-                android:layout_width="85dp"
-                android:layout_height="125dp"
-                android:layout_columnWeight="1"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp" />
 
-            <include
-                layout="@layout/categoria_button"
-                android:layout_width="85dp"
-                android:layout_height="125dp"
-                android:layout_columnWeight="1"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp" />
-
-            <include
-                layout="@layout/categoria_button"
-                android:layout_width="85dp"
-                android:layout_height="125dp"
-                android:layout_columnWeight="1"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp" />
 
         </GridLayout>
 
@@ -177,8 +168,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
             android:id="@+id/BtnHome"
@@ -188,12 +178,11 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name"
-
             android:onClick="homeCategoria"
             android:scaleType="fitCenter"
-            android:src="@mipmap/inicio_g"
-            android:backgroundTint="@color/white"/>
+            android:src="@mipmap/inicio_g" />
 
         <ImageButton
             android:id="@+id/BtnCategoria"
@@ -203,12 +192,12 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:contentDescription="@string/app_name"
+            android:backgroundTint="@color/white"
 
+            android:contentDescription="@string/app_name"
             android:onClick="categoriasCategoria"
             android:scaleType="fitCenter"
-            android:src="@mipmap/categoria"
-            android:backgroundTint="@color/white"/>
+            android:src="@mipmap/categoria" />
 
         <ImageButton
             android:id="@+id/BtnCarrito"
@@ -218,11 +207,11 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name"
             android:onClick="cartCategoria"
             android:scaleType="fitCenter"
-            android:src="@mipmap/shopping_g"
-            android:backgroundTint="@color/white"/>
+            android:src="@mipmap/shopping_g" />
 
         <ImageButton
             android:id="@+id/BtnPerfil"
@@ -232,11 +221,11 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name"
             android:onClick="profileCategoria"
             android:scaleType="fitCenter"
-            android:src="@mipmap/profile_g"
-            android:backgroundTint="@color/white"/>
+            android:src="@mipmap/profile_g" />
     </LinearLayout>
 
 
