@@ -8,15 +8,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <ImageView
-        android:id="@+id/Custom_Category_Button_Image"
+    <ImageButton
+        android:id="@+id/Custom_Category_Button_Image1"
         android:layout_width="105dp"
         android:layout_height="105dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/white"
         android:padding="0dp"
-        android:src="@mipmap/bebidas" />
-
+        android:src="@mipmap/bebes" />
 
     <TextView
         android:id="@+id/Custom_Category_Button_Text"
@@ -26,7 +25,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="325dp"
         android:layout_marginBottom="-4dp"
-        android:text="Bebidas"
+        android:text="Bebés"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp"

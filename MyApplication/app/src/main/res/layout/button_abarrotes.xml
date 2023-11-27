@@ -8,14 +8,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Custom_Category_Button_Image"
         android:layout_width="105dp"
         android:layout_height="105dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/white"
         android:padding="0dp"
-        android:src="@mipmap/hogar" />
+        android:src="@mipmap/abarrotes" />
 
 
     <TextView
@@ -26,7 +26,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="325dp"
         android:layout_marginBottom="-4dp"
-        android:text="Hogar"
+        android:text="@string/abarrotes"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp"

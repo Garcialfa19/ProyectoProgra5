@@ -35,7 +35,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <GridLayout
             android:id="@+id/gridLayout"
             android:layout_width="match_parent"
@@ -48,7 +47,7 @@
 
             <include
                 android:id="@+id/btn01"
-                layout="@layout/abarrotes_button"
+                layout="@layout/button_abarrotes"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -58,7 +57,7 @@
 
             <include
                 android:id="@+id/btn02"
-                layout="@layout/bebes_button"
+                layout="@layout/button_bebes"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -67,7 +66,7 @@
                 />
 
             <include
-                layout="@layout/bebidas_button"
+                layout="@layout/button_bebidas"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -75,7 +74,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/carnes_button"
+                layout="@layout/button_carnes"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -83,7 +82,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/congelados_button"
+                layout="@layout/button_congelados"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -91,7 +90,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/cuidado_personal_button"
+                layout="@layout/button_cuidado_personal"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -99,7 +98,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/frutas_button"
+                layout="@layout/button_frutas"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -107,7 +106,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/lacteos_button"
+                layout="@layout/button_lacteos"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -115,7 +114,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/limpieza_button"
+                layout="@layout/button_limpieza"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -123,7 +122,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/mascotas_button"
+                layout="@layout/button_mascotas"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -131,7 +130,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/panaderia_button"
+                layout="@layout/button_panaderia"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -139,7 +138,7 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/snacks"
+                layout="@layout/button_snacks"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
@@ -147,20 +146,16 @@
                 android:layout_marginTop="10dp" />
 
             <include
-                layout="@layout/hogar_button"
+                layout="@layout/button_hogar"
                 android:layout_width="85dp"
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp" />
-
-
-
-
         </GridLayout>
-
-
     </LinearLayout>
+
+
 
 
     <LinearLayout

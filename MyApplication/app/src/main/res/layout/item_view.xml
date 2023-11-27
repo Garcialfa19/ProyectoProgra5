@@ -65,7 +65,7 @@
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
             tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/carrito" />
+            tools:srcCompat="@mipmap/shopping" />
 
         <Space
             android:layout_width="48dp"
@@ -81,7 +81,7 @@
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
             tools:ignore="VisualLintBounds"
-            tools:srcCompat="@mipmap/perfil" />
+            tools:srcCompat="@mipmap/cocacola" />
 
         <Space
             android:layout_width="48dp"
@@ -130,7 +130,7 @@
         android:layout_marginEnd="83dp"
         android:layout_marginBottom="311dp"
         android:text="Coca-Cola Zero es la bebida perfecta para las personas que quieran el sabor de la Coca-Cola Original, sin azúcar ni calorías."
-        android:textSize="15dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

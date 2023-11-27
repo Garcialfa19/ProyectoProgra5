@@ -53,28 +53,28 @@
 
                 <!-- esto se debería de cambiar pero no es prioridad -->
                 <include
-                    layout="@layout/bebidas_button"
+                    layout="@layout/button_bebidas"
                     android:layout_width="85dp"
                     android:layout_height="125dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp" />
 
                 <include
-                    layout="@layout/snacks"
+                    layout="@layout/button_snacks"
                     android:layout_width="85dp"
                     android:layout_height="125dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="5dp" />
 
                 <include
-                    layout="@layout/categoria_mascotas_button"
+                    layout="@layout/button_mascotas"
                     android:layout_width="85dp"
                     android:layout_height="125dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="5dp" />
 
                 <include
-                    layout="@layout/categoria_otros_button"
+                    layout="@layout/button_otros"
                     android:layout_width="85dp"
                     android:layout_height="125dp"
                     android:layout_marginStart="10dp"
@@ -124,7 +124,7 @@
                         android:orientation="horizontal">
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -132,7 +132,7 @@
                             android:layout_weight="1" />
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -140,7 +140,7 @@
                             android:layout_weight="1" />
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -188,7 +188,7 @@
                         android:orientation="horizontal">
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -196,7 +196,7 @@
                             android:layout_weight="1" />
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -204,7 +204,7 @@
                             android:layout_weight="1" />
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -252,7 +252,7 @@
                         android:orientation="horizontal">
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -260,7 +260,7 @@
                             android:layout_weight="1" />
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -268,7 +268,7 @@
                             android:layout_weight="1" />
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -316,7 +316,7 @@
                         android:orientation="horizontal">
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -324,7 +324,7 @@
                             android:layout_weight="1" />
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
@@ -332,7 +332,7 @@
                             android:layout_weight="1" />
 
                         <include
-                            layout="@layout/producto_button"
+                            layout="@layout/button_producto"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
