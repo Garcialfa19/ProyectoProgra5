@@ -18,7 +18,7 @@
 
         <!--Page Title-->
         <TextView
-            android:id="@+id/textNomUsuario"
+            android:id="@+id/txtUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -77,31 +77,31 @@
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
-            <ImageView
-                android:id="@+id/imageView3"
+            <ImageButton
+                android:id="@+id/AgregarDireccion"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginStart="5dp"
-                android:background="@drawable/roundstyle"
+                android:backgroundTint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@mipmap/mapa" />
+                app:srcCompat="@android:drawable/ic_input_add"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+            <TextView
+                android:id="@+id/DireccionPerf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/light_gray"
                 android:backgroundTint="@color/light_gray"
-                android:text="Direcciones de entrega"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:text="Agrega una dirección"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
 
         </LinearLayout>
 
@@ -114,29 +114,31 @@
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
-            <ImageView
-                android:id="@+id/imageView4"
+            <ImageButton
+                android:id="@+id/AgregarMetodo"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_marginStart="5dp"
+                android:backgroundTint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:src="@mipmap/tarjeta"/>
+                app:srcCompat="@android:drawable/ic_input_add"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="72dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+            <TextView
+                android:id="@+id/MetodoPerf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/light_gray"
                 android:backgroundTint="@color/light_gray"
-                android:text="Métodos de pago"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:text="Agrega método de pago"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center"
+            />
 
         </LinearLayout>
 

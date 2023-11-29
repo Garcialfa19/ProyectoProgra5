@@ -1,8 +1,9 @@
+package com.example.myapplication
+
 import java.net.InetAddress
 import java.net.NetworkInterface
 
 class IP {
-
     fun getIpv4Address(): String {
         var ipv4Address = "Unknown"
 

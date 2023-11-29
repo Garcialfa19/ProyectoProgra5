@@ -12,6 +12,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.myapplication.modelo.Cliente
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     var correo: EditText? = null
     var contrasena: EditText? = null
+    var cliente:Cliente?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     fun login(view: View) {
 
-        val ipAddress = "10.23.4.140"  // Cambiar la ip aquií
+        val ipAddress = "192.168.100.82"  //**************** Cambiar la ip aquií *****************************
         val url = "http://$ipAddress/ecomerce/login.php"
 
         val queue = Volley.newRequestQueue(this)
@@ -70,11 +72,38 @@ class MainActivity : AppCompatActivity() {
                         val clienteJson = jsonResponse.getJSONObject("cliente")
 
                         // You can use the client data as needed
+                        val id = clienteJson.getInt("idUsuario")
                         val nombre = clienteJson.getString("nombre")
-                        println(nombre)
+                        val correo = clienteJson.getString("correo")
+                        val contrasena = clienteJson.getString("contrasena")
+                        val categoria = clienteJson.getString("categoria")?:""
+                        val montoAcumulado = clienteJson.getDouble("montoAcumulado").toFloat()?:0.0f
+                        val direccion = clienteJson.getString("direccion")?:""
+                        val metodoDePago = clienteJson.getString("metodoDePago")?:""
+                        val tipo = clienteJson.getInt("tipo")?:0
+                        val cupones = clienteJson.getInt("cupones")?:0
+                        val carritoCompras_idCarrito = clienteJson.getInt("carrito")?:0
+                        val telefono = clienteJson.getInt("telefono")?:0
+                        cliente=Cliente(id,nombre,correo,contrasena,categoria,montoAcumulado,direccion,metodoDePago,tipo,cupones,carritoCompras_idCarrito,telefono)
+
 
                         // Start the new activity
                         val intent = Intent(this, Inicio::class.java)
+
+                        //poner todos los extra para pasarlos a inicio
+                            intent.putExtra("id",id)
+                            intent.putExtra("nombre",nombre)
+                            intent.putExtra("correo",correo)
+                            intent.putExtra("contrasena",contrasena)
+                            intent.putExtra("categoria",categoria)
+                            intent.putExtra("montoAcumulado",montoAcumulado)
+                            intent.putExtra("direccion",direccion)
+                            intent.putExtra("metodoDePago",metodoDePago)
+                            intent.putExtra("tipo",tipo)
+                            intent.putExtra("cupones",cupones)
+                            intent.putExtra("carritoCompras_idCarrito",carritoCompras_idCarrito)
+                            intent.putExtra("telefono",telefono)
+
                         startActivity(intent)
 
                     } else {

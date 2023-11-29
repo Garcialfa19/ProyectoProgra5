@@ -43,6 +43,7 @@ class Cliente {
 
     }
 
+
     fun setIdUsuario(idUsuario: Int){
         this.idUsuario= idUsuario
     }
