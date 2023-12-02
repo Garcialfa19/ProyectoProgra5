@@ -54,6 +54,7 @@
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
+                android:radius="12dp"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -77,30 +78,19 @@
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
-            <ImageButton
-                android:id="@+id/AgregarDireccion"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginStart="5dp"
-                android:backgroundTint="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/ic_input_add"
-                tools:ignore="SpeakableTextPresentCheck" />
-
             <TextView
                 android:id="@+id/DireccionPerf"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                android:background="@color/light_gray"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/roundstyle"
                 android:backgroundTint="@color/light_gray"
+                android:gravity="center"
                 android:text="Agrega una dirección"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -114,33 +104,38 @@
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
-            <ImageButton
-                android:id="@+id/AgregarMetodo"
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:layout_marginStart="5dp"
-                android:backgroundTint="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/ic_input_add"
-                tools:ignore="SpeakableTextPresentCheck" />
-
             <TextView
                 android:id="@+id/MetodoPerf"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="75dp"
                 android:layout_weight="1"
-                android:background="@color/light_gray"
+                android:background="@drawable/roundstyle"
                 android:backgroundTint="@color/light_gray"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
                 android:text="Agrega método de pago"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:gravity="center"
-            />
+                android:textStyle="bold" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundstyle"
+            android:onClick="cerrarSesionPerfil"
+            android:text="Agregar"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/green"
+            app:cornerRadius="@android:dimen/app_icon_size" />
 
     </LinearLayout>
 

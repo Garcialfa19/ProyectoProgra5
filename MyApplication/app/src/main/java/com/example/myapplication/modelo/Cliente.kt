@@ -15,7 +15,7 @@ class Cliente {
     private var telefono:Int = 0
 
     //De todos los datos
-    constructor(idUsuario:Int, nombre:String, correo:String,contrasena:String,categoria:String,montoAcumulado:Float,direccion:String,metodoDePago:String,tipo:Int,cupones:Int,carrito:Int, telefono:Int){
+    constructor(idUsuario:Int, nombre:String, correo:String,contrasena:String,categoria:String,montoAcumulado:Float,direccion:String,metodoDePago:String,tipo:Int,cupones:Int,carrito:Int,telefono:Int){
         this.idUsuario=idUsuario
         this.nombre=nombre
         this.correo=correo
