@@ -1,5 +1,3 @@
-package com.example.myapplication
-
 import java.net.InetAddress
 import java.net.NetworkInterface
 
@@ -30,9 +28,10 @@ class IP {
 
         return ipv4Address
     }
+}
 
-    fun main() {
-        val ipv4Address = getIpv4Address()
-        println("Device IPv4 Address: $ipv4Address")
-    }
+fun main() {
+    val ip = IP()
+    val ipv4Address = ip.getIpv4Address()
+    println("Device IPv4 Address: $ipv4Address")
 }
