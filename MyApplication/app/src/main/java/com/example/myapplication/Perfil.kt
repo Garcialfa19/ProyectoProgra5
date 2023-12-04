@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.toolbox.Volley
 import com.example.myapplication.modelo.Cliente
 
-class Perfil : AppCompatActivity() {
+class  Perfil : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
