@@ -42,6 +42,9 @@
         <activity
             android:name=".CategoriaProducto"
             />
+        <activity
+            android:name=".ConfiguracionPerfil"
+            />
 
     </application>
 

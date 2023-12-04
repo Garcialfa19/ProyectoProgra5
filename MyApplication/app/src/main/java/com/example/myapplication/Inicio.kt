@@ -15,12 +15,7 @@ class Inicio : AppCompatActivity() {
         setContentView(R.layout.home_view)
 
     }
-    //Funciones de los botones de las categorias
-    fun categoriaTodos(view: View) {
-        println("Estoy en categorias")
-        val intent = Intent(this, Categoria::class.java)
-        startActivity(intent)
-    }
+
     //Funciones de botones
     fun home(view: View) {
         println("Estoy en home")

@@ -2,12 +2,10 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.android.volley.toolbox.Volley
-import com.example.myapplication.modelo.Cliente
 
 class  Perfil : AppCompatActivity() {
 
@@ -27,6 +25,19 @@ class  Perfil : AppCompatActivity() {
             usuario.setText(nombre)
             cupones.setText(cuponesR.toString())
     }
+    //Funcion de boton configuracion
+    fun configuracion(view: View) {
+        println("Estoy en configuracion")
+        val intent = Intent(this, ConfiguracionPerfil::class.java)
+        startActivity(intent)
+    }
+    //Fubcion boton cerrarSesion
+    fun cerrarSesionPerfil(view: View) {
+        println("Estoy en login")
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+    //Funciones de botones
     fun homePerfil(view: View) {
         println("Estoy en home")
         val intent = Intent(this, Inicio::class.java)
@@ -51,11 +62,5 @@ class  Perfil : AppCompatActivity() {
         println("Estoy en profile")
         //val intent = Intent(this, Perfil::class.java)
         //startActivity(intent)
-    }
-
-    fun cerrarSesionPerfil(view: View) {
-        println("Estoy en login")
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
     }
 }
