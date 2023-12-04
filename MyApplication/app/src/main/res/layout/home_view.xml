@@ -7,33 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".Inicio">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_bar_home_view"
-        android:layout_width="389dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/roundstyle"
-        android:backgroundTint="@color/light_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:queryHint="Busca en e-Market" />
-
     <ScrollView
         android:id="@+id/scroll_home_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar_home_view"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ScrollViewCount">
-
 
         <LinearLayout
             android:id="@+id/scroll_view_main_linear_layout"
@@ -41,45 +24,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:orientation="vertical">
-
-
-            <LinearLayout
-                android:id="@+id/categorias_home_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-
-
-                <!-- esto se debería de cambiar pero no es prioridad -->
-                <include
-                    layout="@layout/button_bebidas"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp" />
-
-                <include
-                    layout="@layout/button_snacks"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="5dp" />
-
-                <include
-                    layout="@layout/button_mascotas"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="5dp" />
-
-                <include
-                    layout="@layout/button_otros"
-                    android:layout_width="85dp"
-                    android:layout_height="125dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="5dp" />
-            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/productos_home_view"

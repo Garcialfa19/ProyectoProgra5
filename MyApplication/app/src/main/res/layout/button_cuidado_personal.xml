@@ -1,11 +1,12 @@
 <!-- categoria_button.xml -->
 
-<RelativeLayout
-    android:id="@+id/categoria_button_layout"
+<RelativeLayout android:id="@+id/categoria_button_layout"
     android:layout_width="87dp"
     android:layout_height="125dp"
     android:orientation="horizontal"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    tools:context=".Categoria"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <ImageButton
