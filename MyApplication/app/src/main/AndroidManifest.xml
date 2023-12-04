@@ -29,9 +29,7 @@
         <activity
             android:name=".CrearCuenta"
             />
-        <activity
-            android:name=".HomeView"
-            />
+
         <activity
             android:name=".Categoria"
         />
@@ -40,6 +38,9 @@
         />
         <activity
             android:name=".Perfil"
+            />
+        <activity
+            android:name=".CategoriaProducto"
             />
 
     </application>

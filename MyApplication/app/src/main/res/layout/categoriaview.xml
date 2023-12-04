@@ -53,7 +53,18 @@
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:src="@mipmap/bebidas" />
+                android:src="@mipmap/bebidas"
+                android:onClick="categoriaAbarrotes"/>
+
+            <include
+                layout="@layout/button_bebidas"
+                android:layout_width="85dp"
+                android:layout_height="125dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:onClick="categoriaBebidas" />
+
 
             <include
                 android:id="@+id/btn02"
@@ -65,13 +76,6 @@
                 android:layout_marginTop="10dp"
                 />
 
-            <include
-                layout="@layout/button_bebidas"
-                android:layout_width="85dp"
-                android:layout_height="125dp"
-                android:layout_columnWeight="1"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp" />
 
             <include
                 layout="@layout/button_carnes"

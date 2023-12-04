@@ -26,6 +26,22 @@ class Categoria : AppCompatActivity() {
         //startActivity(intent)
     }
 
+    fun categoriaAbarrotes(view: View) {
+        println("Estoy en categoria Productos")
+        val intent = Intent(this, CategoriaProducto::class.java)
+        val categoria = "Abarrotes"
+        intent.putExtra("categoria",categoria)
+        startActivity(intent)
+    }
+
+    fun categoriaBebidas(view: View) {
+        println("Estoy en categoria Bebidas")
+        val intent = Intent(this, CategoriaProducto::class.java)
+        val categoria = "Bebidas"
+        intent.putExtra("categoria",categoria)
+        startActivity(intent)
+    }
+
 
     fun cartCategoria(view: View) {
         println("Estoy en cart")
