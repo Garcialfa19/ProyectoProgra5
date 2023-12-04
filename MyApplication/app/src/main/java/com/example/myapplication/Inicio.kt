@@ -15,6 +15,7 @@ class Inicio : AppCompatActivity() {
         setContentView(R.layout.home_view)
 
     }
+    //Funciones de botones
     fun home(view: View) {
         println("Estoy en home")
         //val intent = Intent(this, HomeView::class.java)
