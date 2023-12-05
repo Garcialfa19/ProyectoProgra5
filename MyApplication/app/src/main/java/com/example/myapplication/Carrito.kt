@@ -12,15 +12,15 @@ class Carrito : AppCompatActivity() {
     //private lateinit var binding: ActivityMainBinding
 //    private lateinit var adapter: AdaptadorProducto
 
-    var listaProductos = ArrayList<Producto>()
-    var carroCompras = ArrayList<Producto>()
+//   AdaptadorProducto var listaProductos = ArrayList<Producto>()
+//    var carroCompras = ArrayList<Producto>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        binding = ActivityCrritoBinding.inflate(layoutInflater)
         setContentView(R.layout.cart_view)
 
-        carroCompras = intent.getSerializableExtra("carro_compras") as ArrayList<Producto>
+//        carroCompras = intent.getSerializableExtra("carro_compras") as ArrayList<Producto>
 
 //        setupRecyclerView()
     }

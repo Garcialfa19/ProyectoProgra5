@@ -1,0 +1,11 @@
+data class Producto(
+    val idproducto: Int,
+    val nombre: String,
+    val categoria: String,
+    val oferta: Int,
+    val descripcion: String,
+    val imagen: String,
+    val precioUnitario: Int,
+    val disponibilidad: Int,
+    val patrocinado: Int
+)
