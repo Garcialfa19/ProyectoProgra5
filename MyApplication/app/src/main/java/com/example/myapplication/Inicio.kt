@@ -43,6 +43,7 @@ class Inicio : AppCompatActivity() {
 
         //recibo los extra
             val idR:Int = getIntent().getIntExtra("id",0)
+            println("Int recibido en inicio: $idR")
             val nombreR:String? = getIntent().getStringExtra("nombre")
             val correoR:String? = getIntent().getStringExtra("correo")
             val contrasenaR:String? = getIntent().getStringExtra("contrasena")

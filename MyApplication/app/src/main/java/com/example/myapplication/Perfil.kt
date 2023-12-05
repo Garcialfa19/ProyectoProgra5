@@ -2,22 +2,38 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.example.myapplication.modelo.Cliente
+import org.json.JSONException
+import org.json.JSONObject
 
 class  Perfil : AppCompatActivity() {
-
-
+    var id:Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_view)
 
+        //llamo al boton y llamo al listener
+            val btn: Button = findViewById(R.id.btnAgregar)
+            btn.setOnClickListener {
+                registrarMetDir(it)
+            }
+
         //asocio la clase text view al nombre del componente
             val usuario:TextView=findViewById(R.id.txtUsuario)
             val cupones:TextView=findViewById(R.id.CuponesButton)
+
         //recibo los extras
+            id= getIntent().getIntExtra("id",0)
             val nombre:String? = getIntent().getStringExtra("nombre")
             val cuponesR:Int = getIntent().getIntExtra("cupones",0)
 
@@ -31,7 +47,42 @@ class  Perfil : AppCompatActivity() {
         val intent = Intent(this, ConfiguracionPerfil::class.java)
         startActivity(intent)
     }
-    //Fubcion boton cerrarSesion
+
+    //funcion agregar metodo y direccion
+    fun registrarMetDir(view: View){
+        //recibo lo que se encuentre en los text view de direccion y metodo de pago
+        var direccion:TextView?=findViewById(R.id.textDireccionActual)
+        var metodo:TextView?=findViewById(R.id.textMetodoPago)
+
+        val ipAddress = "192.168.100.82"  // Cambiar la ip aquií
+        val url = "http://$ipAddress/ecomerce/insertarMetodoDireccion.php"
+
+        //Log the URL
+        Log.d("URL_LOG", "Request URL: $url")
+
+        val queue = Volley.newRequestQueue(this)
+        var resultadoPost = object : StringRequest(
+            Request.Method.POST, url,
+            Response.Listener<String> { response ->
+                Toast.makeText(this, "Direccion y metodo insertados exitosamente", Toast.LENGTH_LONG).show()
+            }, Response.ErrorListener { error ->
+                // Step 6: Log detailed error information
+                Log.e("VOLLEY_ERROR", "Error: ${error.networkResponse?.statusCode}", error)
+                Toast.makeText(this, "Error ${error.networkResponse?.statusCode}", Toast.LENGTH_LONG).show()
+            }) {
+            override fun getParams(): MutableMap<String, String>? {
+                val parametros = HashMap<String, String>()
+                parametros.put("id", id.toString())
+                parametros.put("direccion", direccion?.text.toString())
+                parametros.put("metodoDePago", metodo?.text.toString())
+                return parametros
+            }
+        }
+        queue.add(resultadoPost)
+    }
+
+
+    //Funcion boton cerrarSesion
     fun cerrarSesionPerfil(view: View) {
         println("Estoy en login")
         val intent = Intent(this, MainActivity::class.java)

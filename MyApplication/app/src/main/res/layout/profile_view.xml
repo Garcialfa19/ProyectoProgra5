@@ -45,16 +45,16 @@
 
             <Button
                 android:id="@+id/CuponesButton"
-                android:layout_width="320dp"
+                android:layout_width="306dp"
                 android:layout_height="72dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:backgroundTint="@color/light_gray"
+                android:radius="12dp"
                 android:text="25,000"
                 android:textAlignment="textStart"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
-                android:radius="12dp"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -73,7 +73,7 @@
         <LinearLayout
             android:id="@+id/direcciones_container_layout"
             android:layout_width="match_parent"
-            android:layout_height="174dp"
+            android:layout_height="142dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
@@ -87,17 +87,18 @@
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textDireccionActual"
-                android:layout_width="263dp"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/roundstyle"
                 android:backgroundTint="@color/light_gray"
                 android:gravity="center"
-                android:text="dirección"
+                android:text="Ingresar dirección"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -117,12 +118,13 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="Método de Pago:"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <TextView
+            <EditText
                 android:id="@+id/textMetodoPago"
                 android:layout_width="wrap_content"
                 android:layout_height="115dp"
@@ -133,7 +135,7 @@
                 android:background="@drawable/roundstyle"
                 android:backgroundTint="@color/light_gray"
                 android:gravity="center"
-                android:text="método de pago"
+                android:text="Ingresar método de pago"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
