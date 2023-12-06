@@ -72,7 +72,7 @@ class  Perfil : AppCompatActivity() {
             }) {
             override fun getParams(): MutableMap<String, String>? {
                 val parametros = HashMap<String, String>()
-                parametros.put("id", id.toString())
+                parametros.put("idUsuario", id.toString())
                 parametros.put("direccion", direccion?.text.toString())
                 parametros.put("metodoDePago", metodo?.text.toString())
                 return parametros
