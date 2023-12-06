@@ -15,28 +15,6 @@ class Inicio : AppCompatActivity() {
         setContentView(R.layout.home_view)
 
     }
-
-    //Funciones de botones
-    fun home(view: View) {
-        println("Estoy en home")
-        //val intent = Intent(this, HomeView::class.java)
-        //startActivity(intent)
-    }
-
-    fun categorias(view: View) {
-        println("Estoy en categorias")
-        val intent = Intent(this, Categoria::class.java)
-        startActivity(intent)
-    }
-
-
-    fun cart(view: View) {
-        println("Estoy en cart")
-        val intent = Intent(this, Carrito::class.java)
-        startActivity(intent)
-    }
-
-
     fun profile(view: View) {
         println("Estoy en profile")
         val intent = Intent(this, Perfil::class.java)
@@ -70,6 +48,25 @@ class Inicio : AppCompatActivity() {
             intent.putExtra("carritoCompras_idCarrito",carritoCompras_idCarritoR)
             intent.putExtra("telefono",telefonoR)
 
+        startActivity(intent)
+    }
+    //Funciones de botones
+    fun home(view: View) {
+        println("Estoy en home")
+        //val intent = Intent(this, HomeView::class.java)
+        //startActivity(intent)
+    }
+
+    fun categorias(view: View) {
+        println("Estoy en categorias")
+        val intent = Intent(this, Categoria::class.java)
+        startActivity(intent)
+    }
+
+
+    fun cart(view: View) {
+        println("Estoy en cart")
+        val intent = Intent(this, Carrito::class.java)
         startActivity(intent)
     }
 

@@ -29,7 +29,7 @@ class CategoriaProducto : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.rvListaProductos)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val ipAddress = "172.20.10.6" // Change the IP address here
+        val ipAddress = "192.168.1.15" // Change the IP address here
         val categoria: String? = intent.getStringExtra("categoria")
         val url = "http://$ipAddress/ecomerce/productos.php?categoria=$categoria"
         Log.d("URL_LOG", "Request URL: $url")

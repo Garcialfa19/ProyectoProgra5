@@ -27,7 +27,7 @@ class ConfiguracionPerfil : AppCompatActivity(){
         }
     }
     fun configurar(view: View){
-        val ipAddress = "172.20.10.6"  // Cambiar la ip aquií
+        val ipAddress = "192.168.1.15"  // Cambiar la ip aquií
         val url = "http://$ipAddress/ecomerce/insertar.php"
     }
 }
