@@ -19,7 +19,7 @@
             android:padding="11dp"
             android:scaleType="fitCenter"
             tools:ignore="MissingConstraints"
-            android:src="@mipmap/categoria"/>
+            android:src="@mipmap/cocacola"/>
 
     <TextView
             android:id="@+id/textView18"

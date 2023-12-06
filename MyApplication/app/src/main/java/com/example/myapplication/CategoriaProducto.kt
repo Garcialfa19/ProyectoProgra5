@@ -1,6 +1,9 @@
 package com.example.myapplication
 
+import Producto
+import ProductoAdapter
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -10,21 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import org.json.JSONArray
+import com.example.myapplication.R
 import org.json.JSONException
 import org.json.JSONObject
 
-data class Producto(
-    val idproducto: Int,
-    val nombre: String,
-    val categoria: String,
-    val oferta: Int,
-    val descripcion: String,
-    val imagen: String,
-    val precioUnitario: Int,
-    val disponibilidad: Int,
-    val patrocinado: Int
-)
 
 class CategoriaProducto : AppCompatActivity() {
     private val productList: MutableList<Producto> = mutableListOf()
@@ -37,17 +29,26 @@ class CategoriaProducto : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.rvListaProductos)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val ipAddress = "192.168.0.103" // Change the IP address here
+        val ipAddress = "172.20.10.6" // Change the IP address here
         val categoria: String? = intent.getStringExtra("categoria")
         val url = "http://$ipAddress/ecomerce/productos.php?categoria=$categoria"
         Log.d("URL_LOG", "Request URL: $url")
 
         val queue = Volley.newRequestQueue(this)
 
+        // Show a loading indicator (optional)
+        // You can customize this loading indicator according to your UI design
+        val progressDialog = ProgressDialog(this)
+        progressDialog.setMessage("Loading...")
+        progressDialog.show()
+
         val stringRequest = StringRequest(
             Request.Method.GET,
             url,
             { response ->
+                // Dismiss the loading indicator
+                progressDialog.dismiss()
+                Log.d("Response", response)
                 try {
                     val jsonResponse = JSONObject(response)
                     val productosArray = jsonResponse.getJSONArray("productos")
@@ -87,14 +88,18 @@ class CategoriaProducto : AppCompatActivity() {
                 }
             },
             { error ->
+                // Dismiss the loading indicator
+                progressDialog.dismiss()
+
                 Log.e("VOLLEY_ERROR", "Error: ${error.networkResponse?.statusCode}", error)
                 Toast.makeText(
                     this,
-                    "Error ${error.networkResponse?.statusCode}",
+                    "Error: ${error.message}",
                     Toast.LENGTH_LONG
                 ).show()
             })
 
+        // Add the request to the queue
         queue.add(stringRequest)
     }
 }
