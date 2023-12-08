@@ -53,8 +53,7 @@
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:src="@mipmap/bebidas"
-                android:onClick="categoriaAbarrotes"/>
+                android:src="@mipmap/bebidas"/>
 
             <include
                 layout="@layout/button_bebidas"
@@ -62,8 +61,7 @@
                 android:layout_height="125dp"
                 android:layout_columnWeight="1"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:onClick="categoriaBebidas" />
+                android:layout_marginTop="10dp"/>
 
 
             <include

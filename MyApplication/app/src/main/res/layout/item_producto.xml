@@ -12,7 +12,6 @@
         android:id="@+id/imageView2"
         android:layout_width="150dp"
         android:layout_height="150dp"
-
         android:scaleType="fitCenter"
         tools:srcCompat="@tools:sample/avatars"/>
 
@@ -27,7 +26,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_width="255dp"
-        android:layout_height="45dp"
+        android:layout_height="30dp"
         android:hint="Nombre"
         app:layout_constraintBottom_toTopOf="@+id/tvDescripcion"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,11 +35,12 @@
         android:textSize="20sp"
         android:textStyle="bold"/>
 
+
     <TextView
         android:id="@+id/tvDescripcion"
         android:layout_marginStart="5dp"
         android:layout_width="255dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:hint="Descripcion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,6 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="15sp"
         android:textStyle="bold"/>
-
 
     <LinearLayout
         android:layout_marginStart="5dp"
@@ -86,7 +85,6 @@
 
     <CheckBox
         android:id="@+id/cbCarro"
-
         android:layout_width="255dp"
         android:layout_height="30dp"
         android:text="Añadir al carro de compras"

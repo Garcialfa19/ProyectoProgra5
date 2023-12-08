@@ -1,6 +1,6 @@
 package com.example.myapplication
 
-import Producto
+
 import ProductoAdapter
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
@@ -14,6 +14,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.myapplication.R
+import com.example.myapplication.modelo.Producto
 import org.json.JSONException
 import org.json.JSONObject
 
