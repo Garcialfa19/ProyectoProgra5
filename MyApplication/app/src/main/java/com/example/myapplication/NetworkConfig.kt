@@ -7,6 +7,7 @@ object NetworkConfig {
     }
 
     fun getBaseUrl(): String {
-        return "$ipAddress"
+
+        return ipAddress
     }
 }

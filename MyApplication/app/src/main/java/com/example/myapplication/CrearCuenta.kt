@@ -39,7 +39,7 @@ class CrearCuenta : AppCompatActivity() {
     }
 
     fun registrar(view: View) {
-        val ipAddress = NetworkConfig.getBaseUrl()
+        val ipAddress = NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
         val url = "http://$ipAddress/ecomerce/insertar.php"
 
         //Log the URL

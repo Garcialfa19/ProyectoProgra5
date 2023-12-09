@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     fun login(view: View) {
 
-        val ipAddress = NetworkConfig.getBaseUrl()
+        val ipAddress = NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
         val url = "http://$ipAddress/ecomerce/login.php"
 
         val queue = Volley.newRequestQueue(this)

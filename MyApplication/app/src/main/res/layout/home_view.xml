@@ -67,29 +67,15 @@
                         android:baselineAligned="false"
                         android:orientation="horizontal">
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
-
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
-
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/listaBebidas"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            tools:listitem="@layout/button_producto"
+                            app:layout_constraintBottom_toTopOf="@+id/btnVolverCategoria"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </LinearLayout>
 
