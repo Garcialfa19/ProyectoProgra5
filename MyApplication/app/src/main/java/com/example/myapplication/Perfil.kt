@@ -54,7 +54,7 @@ class  Perfil : AppCompatActivity() {
         var direccion:TextView?=findViewById(R.id.textDireccionActual)
         var metodo:TextView?=findViewById(R.id.textMetodoPago)
 
-        val ipAddress = "192.168.1.15"  // Cambiar la ip aquií
+        val ipAddress = NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
         val url = "http://$ipAddress/ecomerce/insertarMetodoDireccion.php"
 
         //Log the URL

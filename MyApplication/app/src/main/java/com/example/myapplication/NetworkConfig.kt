@@ -1,6 +1,6 @@
 object NetworkConfig {
     // Default IP address, you can set a default value or set it dynamically based on your needs
-    private var ipAddress: String = "192.168.0.104"
+    private var ipAddress: String = "172.20.10.6"
 
     fun setIpAddress(ip: String) {
         ipAddress = ip
