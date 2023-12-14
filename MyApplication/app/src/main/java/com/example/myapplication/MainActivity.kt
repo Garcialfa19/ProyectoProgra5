@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
 
     var correo: EditText? = null
     var contrasena: EditText? = null
-    var cliente:Cliente?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,22 +68,64 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this, "Usuario reconocido", Toast.LENGTH_LONG).show()
 
                         // Extract client data if needed
-                        val clienteJson = jsonResponse.getJSONObject("cliente")
+                        val clienteJson = jsonResponse?.getJSONObject("cliente")
 
                         // You can use the client data as needed
-                        val id = clienteJson.getInt("idUsuario")
-                        val nombre = clienteJson.getString("nombre")
-                        val correo = clienteJson.getString("correo")
-                        val contrasena = clienteJson.getString("contrasena")
-                        val categoria = clienteJson.getString("categoria")?:""
-                        val montoAcumulado = clienteJson.getDouble("montoAcumulado").toFloat()?:0.0f
-                        val direccion = clienteJson.getString("direccion")?:""
-                        val metodoDePago = clienteJson.getString("metodoDePago")?:""
-                        val tipo = clienteJson.getInt("tipo")?:0
-                        val cupones = clienteJson.getInt("cupones")?:0
-                        val carritoCompras_idCarrito = clienteJson.getInt("carrito")?:0
-                        val telefono = clienteJson.getInt("telefono")?:0
-                        cliente=Cliente(id,nombre,correo,contrasena,categoria,montoAcumulado,direccion,metodoDePago,tipo,cupones,carritoCompras_idCarrito,telefono)
+                        val id = clienteJson?.getInt("idUsuario")
+                        val nombre = clienteJson?.getString("nombre")
+                        val correo = clienteJson?.getString("correo")
+                        val contrasena = clienteJson?.getString("contrasena")
+
+                        var categoria:String?=""
+                        var caJSON:Any=clienteJson?.get("categoria").toString()
+                        if(caJSON=="null")
+                            categoria=""
+                        else
+                            categoria=clienteJson?.getString("categoria")
+
+                        var montoAcumulado:Float?=0.0f
+                        var maJSON:Any=clienteJson?.get("montoAcumulado").toString()
+                        if(maJSON=="null")
+                            montoAcumulado=0.0f
+                        else
+                            montoAcumulado=clienteJson?.getDouble("montoAcumulado")?.toFloat()
+
+                        var direccion:String?=""
+                        var diJSON:Any=clienteJson?.get("direccion").toString()
+                        if(diJSON=="null")
+                            direccion=""
+                        else
+                            direccion=clienteJson?.getString("direccion")
+
+                        var metodoDePago:String?=""
+                        var mpJSON:Any=clienteJson?.get("metodoDePago").toString()
+                        if(mpJSON=="null")
+                            metodoDePago=""
+                        else
+                            metodoDePago=clienteJson?.getString("metodoDePago")
+
+                        var tipo:Int?=0
+                        var tiJSON:Any=clienteJson?.get("tipo").toString()
+                        if(tiJSON=="null")
+                            tipo=0
+                        else
+                            tipo=clienteJson?.getInt("tipo")
+
+                        var cupones:Int?=0
+                        var cuJSON:Any=clienteJson?.get("cupones").toString()
+                        if(tiJSON=="null")
+                            cupones=0
+                        else
+                            cupones=clienteJson?.getInt("cupones")
+
+                        var carritoCompras_idCarrito:Int?=0
+                        var cacoJSON:Any=clienteJson?.get("carrito").toString()
+                        if(cacoJSON=="null")
+                            carritoCompras_idCarrito=0
+                        else
+                            carritoCompras_idCarrito=clienteJson?.getInt("carrito")
+
+                        val telefono:Int? = clienteJson?.getInt("telefono")
 
 
                         // Start the new activity
