@@ -19,7 +19,7 @@ class ProductoAdapter(private val productList: List<Producto>) :
         val nombreTextView: TextView = itemView.findViewById(R.id.tvNomProducto)
         val descripcionTextView: TextView = itemView.findViewById(R.id.tvDescripcion)
         val precioTextView: TextView = itemView.findViewById(R.id.tvPrecio)
-        //val imagenView: ImageView = itemView.findViewById(R.id.imageView2)
+        val imagenView: ImageView = itemView.findViewById(R.id.imageView2)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoViewHolder {
@@ -36,8 +36,8 @@ class ProductoAdapter(private val productList: List<Producto>) :
         holder.descripcionTextView.text = producto.descripcion
         holder.precioTextView.text = producto.precioUnitario.toString()
 
-        // Load image asynchronously
-        //LoadImageAsyncTask(holder.imagenView).execute(producto.imagen)
+        holder.imagenView.setImageResource(R.mipmap.arandanos);
+
     }
 
     override fun getItemCount(): Int {

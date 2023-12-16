@@ -810,7 +810,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imageArandanos"
+                                android:id="@+id/imageLysol"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -819,10 +819,10 @@
                                 android:padding="11dp"
                                 android:scaleType="fitCenter"
                                 tools:ignore="MissingConstraints"
-                                android:src="@mipmap/arandanos"/>
+                                android:src="@mipmap/lysol"/>
 
                             <TextView
-                                android:id="@+id/nombreArandanos"
+                                android:id="@+id/nombreLysol"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -830,16 +830,16 @@
                                 android:textSize="11sp"
                                 tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="Arandanos Bandeja"/>
+                                android:text="Lysol para mascotas"/>
                             <TextView
-                                android:id="@+id/precioArandano"
+                                android:id="@+id/precioLysol"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
                                 android:textSize="10sp"
                                 tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="₡8700"/>
+                                android:text="₡5350"/>
 
                         </LinearLayout>
 
@@ -852,7 +852,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imageUva"
+                                android:id="@+id/imagepedegree"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -861,10 +861,10 @@
                                 android:padding="11dp"
                                 android:scaleType="fitCenter"
                                 tools:ignore="MissingConstraints"
-                                android:src="@mipmap/uvas"/>
+                                android:src="@mipmap/pedegree"/>
 
                             <TextView
-                                android:id="@+id/nombreUva"
+                                android:id="@+id/nombrepedegree"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -872,16 +872,16 @@
                                 android:textSize="11sp"
                                 tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="Uva Verde Bandeja"/>
+                                android:text="Pedigree Bolsa 7000 G"/>
                             <TextView
-                                android:id="@+id/precioUva"
+                                android:id="@+id/preciopedegree"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
                                 android:textSize="10sp"
                                 tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="₡7500"/>
+                                android:text="₡19935"/>
 
                         </LinearLayout>
 
@@ -894,7 +894,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imageHongo"
+                                android:id="@+id/imagePechera"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -903,10 +903,10 @@
                                 android:padding="11dp"
                                 android:scaleType="fitCenter"
                                 tools:ignore="MissingConstraints"
-                                android:src="@mipmap/hongo"/>
+                                android:src="@mipmap/pechera"/>
 
                             <TextView
-                                android:id="@+id/nombreHongo"
+                                android:id="@+id/nombrePechera"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -914,16 +914,16 @@
                                 android:textSize="11sp"
                                 tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="Hongo Blanco Rebanado"/>
+                                android:text="Pechera Perro Animal Planet"/>
                             <TextView
-                                android:id="@+id/precioHonogo"
+                                android:id="@+id/precioPechera"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
                                 android:textSize="10sp"
                                 tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="₡6290"/>
+                                android:text="₡10785"/>
 
                         </LinearLayout>
 
@@ -936,7 +936,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imagenFresas"
+                                android:id="@+id/imagenBeneful"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -945,10 +945,10 @@
                                 android:padding="11dp"
                                 android:scaleType="fitCenter"
                                 tools:ignore="MissingConstraints"
-                                android:src="@mipmap/fresa"/>
+                                android:src="@mipmap/beneful"/>
 
                             <TextView
-                                android:id="@+id/nombreFreasas"
+                                android:id="@+id/nombreBeneful"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -956,16 +956,16 @@
                                 android:textSize="11sp"
                                 tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="Fresa Grande"/>
+                                android:text="Purina Beneful Bolsa 1Kg"/>
                             <TextView
-                                android:id="@+id/precioFreasas"
+                                android:id="@+id/precioBeneful"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
                                 android:textSize="10sp"
                                 tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="₡5500"/>
+                                android:text="₡29160"/>
 
                         </LinearLayout>
 
@@ -978,7 +978,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imagenCebolla"
+                                android:id="@+id/imagenBil"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -987,10 +987,10 @@
                                 android:padding="11dp"
                                 android:scaleType="fitCenter"
                                 tools:ignore="MissingConstraints"
-                                android:src="@mipmap/cebolla"/>
+                                android:src="@mipmap/biljac"/>
 
                             <TextView
-                                android:id="@+id/nombreCebolla"
+                                android:id="@+id/nombreBil"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -998,16 +998,16 @@
                                 android:textSize="11sp"
                                 tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="Cebolla Morada"/>
+                                android:text="Bil Jac Bolsa 2.7Kg"/>
                             <TextView
-                                android:id="@+id/precioCebolla"
+                                android:id="@+id/preciobil"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
                                 android:textSize="10sp"
                                 tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
                                 tools:ignore="MissingConstraints"
-                                android:text="₡2850"/>
+                                android:text="₡14500"/>
 
                         </LinearLayout>
 
