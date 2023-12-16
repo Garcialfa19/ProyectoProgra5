@@ -19,7 +19,7 @@ class ProductoAdapter(private val productList: List<Producto>) :
         val nombreTextView: TextView = itemView.findViewById(R.id.tvNomProducto)
         val descripcionTextView: TextView = itemView.findViewById(R.id.tvDescripcion)
         val precioTextView: TextView = itemView.findViewById(R.id.tvPrecio)
-        val imagenView: ImageView = itemView.findViewById(R.id.imageView2)
+        //val imagenView: ImageView = itemView.findViewById(R.id.imageView2)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoViewHolder {
@@ -37,37 +37,37 @@ class ProductoAdapter(private val productList: List<Producto>) :
         holder.precioTextView.text = producto.precioUnitario.toString()
 
         // Load image asynchronously
-        LoadImageAsyncTask(holder.imagenView).execute(producto.imagen)
+        //LoadImageAsyncTask(holder.imagenView).execute(producto.imagen)
     }
 
     override fun getItemCount(): Int {
         return productList.size
     }
 
-    private class LoadImageAsyncTask(private val imageView: ImageView) :
-        AsyncTask<String, Void, Bitmap?>() {
-
-        override fun doInBackground(vararg params: String): Bitmap? {
-            val base64String = params[0]
-            return decodeBase64(base64String)
-        }
-
-        override fun onPostExecute(result: Bitmap?) {
-            if (result != null) {
-                imageView.setImageBitmap(result)
-            } else {
-                // Handle image loading error
-            }
-        }
-
-        private fun decodeBase64(base64String: String): Bitmap? {
-            return try {
-                val imageBytes = Base64.decode(base64String, Base64.DEFAULT)
-                BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
-            } catch (e: Exception) {
-                e.printStackTrace()
-                null
-            }
-        }
-    }
+//    private class LoadImageAsyncTask(private val imageView: ImageView) :
+//        AsyncTask<String, Void, Bitmap?>() {
+//
+//        override fun doInBackground(vararg params: String): Bitmap? {
+//            val base64String = params[0]
+//            return decodeBase64(base64String)
+//        }
+//
+//        override fun onPostExecute(result: Bitmap?) {
+//            if (result != null) {
+//                imageView.setImageBitmap(result)
+//            } else {
+//                // Handle image loading error
+//            }
+//        }
+//
+//        private fun decodeBase64(base64String: String): Bitmap? {
+//            return try {
+//                val imageBytes = Base64.decode(base64String, Base64.DEFAULT)
+//                BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+//            } catch (e: Exception) {
+//                e.printStackTrace()
+//                null
+//            }
+//        }
+//    }
 }

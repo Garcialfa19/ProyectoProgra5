@@ -50,50 +50,231 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="TextViewEdits" />
 
-
                 <HorizontalScrollView
                     android:id="@+id/scroll_horizontal_bebidas_home_view"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     tools:ignore="MissingConstraints,ScrollViewCount">
 
-
                     <LinearLayout
-                        android:id="@+id/scroll_horizontal_bebidas_home_view_main_linear_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:baselineAligned="false"
                         android:orientation="horizontal">
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp">
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
+                        <ImageButton
+                            android:id="@+id/imageButtonTequila"
+                            android:layout_width="182dp"
+                            android:layout_height="118dp"
+                            android:background="@drawable/roundstyle"
+                            android:backgroundTint="@color/light_gray"
+                            android:contentDescription="@string/app_name"
+                            android:padding="11dp"
+                            android:scaleType="fitCenter"
+                            tools:ignore="MissingConstraints"
+                            android:src="@mipmap/tequilapatron"/>
+
+                        <TextView
+                            android:id="@+id/nombreTequila"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="11sp"
+                            tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                            tools:ignore="MissingConstraints"
+                            android:text="Tequila Patron"/>
+                        <TextView
+                            android:id="@+id/precioTequila"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                            tools:ignore="MissingConstraints"
+                            android:text="₡27000"/>
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp">
 
+
+                        <ImageButton
+                            android:id="@+id/imageCocaCola"
+                            android:layout_width="182dp"
+                            android:layout_height="118dp"
+                            android:background="@drawable/roundstyle"
+                            android:backgroundTint="@color/light_gray"
+                            android:contentDescription="@string/app_name"
+                            android:padding="11dp"
+                            android:scaleType="fitCenter"
+                            tools:ignore="MissingConstraints"
+                            android:src="@mipmap/cocacola"/>
+
+                        <TextView
+                            android:id="@+id/nombreCocaCola"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="11sp"
+                            tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                            tools:ignore="MissingConstraints"
+                            android:text="Coca-Cola"/>
+                        <TextView
+                            android:id="@+id/precioCocaCola"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                            tools:ignore="MissingConstraints"
+                            android:text="₡1900"/>
+
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imageLaCroix"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/lacroix"/>
+
+                            <TextView
+                                android:id="@+id/nombrelaCroix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="laCroix"/>
+                            <TextView
+                                android:id="@+id/preciolaCroix"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡8000"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imageBlue"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/bluelabel"/>
+
+                            <TextView
+                                android:id="@+id/nombreBlue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="JOHNNIE WALKER BLUE LABEL"/>
+                            <TextView
+                                android:id="@+id/precioBlue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡200000"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/limon"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/telimon"/>
+
+                            <TextView
+                                android:id="@+id/nombrelimon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="HI-C Limón"/>
+                            <TextView
+                                android:id="@+id/precioLimon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡460"/>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
                 </HorizontalScrollView>
 
 
@@ -117,47 +298,229 @@
 
                 <HorizontalScrollView
                     android:id="@+id/scroll_horizontal_carnes_home_view"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     tools:ignore="MissingConstraints,ScrollViewCount">
 
-
                     <LinearLayout
-                        android:id="@+id/scroll_horizontal_carnes_home_view_main_linear_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:baselineAligned="false"
                         android:orientation="horizontal">
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
+                            <ImageButton
+                                android:id="@+id/imageButtonnewyork"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/newyork"/>
+
+                            <TextView
+                                android:id="@+id/nombrenewyork"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="New York Res Angus"/>
+                            <TextView
+                                android:id="@+id/precionewyork"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡27955"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imagetbone"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/tbone"/>
+
+                            <TextView
+                                android:id="@+id/nombretbone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Steak T Bone Bufalo"/>
+                            <TextView
+                                android:id="@+id/preciotbone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡19945"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imagecamaron"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/camaron"/>
+
+                            <TextView
+                                android:id="@+id/nombrecamaron"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Camaron Jumbo"/>
+                            <TextView
+                                android:id="@+id/precioCamaron"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡31200"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imagepollo"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/pollo"/>
+
+                            <TextView
+                                android:id="@+id/nombrepollo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Pechuga De Pollo"/>
+                            <TextView
+                                android:id="@+id/precioPollo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡5295"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/salmon"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/salmon"/>
+
+                            <TextView
+                                android:id="@+id/nombresalmon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Filet Salmon"/>
+                            <TextView
+                                android:id="@+id/precioSalmon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡17970"/>
+
+                        </LinearLayout>
+
 
                     </LinearLayout>
-
-
                 </HorizontalScrollView>
 
 
@@ -180,48 +543,230 @@
 
 
                 <HorizontalScrollView
-                    android:id="@+id/scroll_horizontal_frutas_verduras_home_view"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/scroll_horizontal_frutas_home_view"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     tools:ignore="MissingConstraints,ScrollViewCount">
 
-
                     <LinearLayout
-                        android:id="@+id/scroll_horizontal_frutas_verduras_home_view_main_linear_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:baselineAligned="false"
                         android:orientation="horizontal">
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
+                            <ImageButton
+                                android:id="@+id/imageArandanos"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/arandanos"/>
+
+                            <TextView
+                                android:id="@+id/nombreArandanos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Arandanos Bandeja"/>
+                            <TextView
+                                android:id="@+id/precioArandano"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡8700"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imageUva"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/uvas"/>
+
+                            <TextView
+                                android:id="@+id/nombreUva"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Uva Verde Bandeja"/>
+                            <TextView
+                                android:id="@+id/precioUva"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡7500"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imageHongo"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/hongo"/>
+
+                            <TextView
+                                android:id="@+id/nombreHongo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Hongo Blanco Rebanado"/>
+                            <TextView
+                                android:id="@+id/precioHonogo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡6290"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imagenFresas"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/fresa"/>
+
+                            <TextView
+                                android:id="@+id/nombreFreasas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Fresa Grande"/>
+                            <TextView
+                                android:id="@+id/precioFreasas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡5500"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imagenCebolla"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/cebolla"/>
+
+                            <TextView
+                                android:id="@+id/nombreCebolla"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Cebolla Morada"/>
+                            <TextView
+                                android:id="@+id/precioCebolla"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡2850"/>
+
+                        </LinearLayout>
+
 
                     </LinearLayout>
-
-
                 </HorizontalScrollView>
 
 
@@ -245,47 +790,229 @@
 
                 <HorizontalScrollView
                     android:id="@+id/scroll_horizontal_mascotas_home_view"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     tools:ignore="MissingConstraints,ScrollViewCount">
 
-
                     <LinearLayout
-                        android:id="@+id/scroll_horizontal_mascotas_home_view_main_linear_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:baselineAligned="false"
                         android:orientation="horizontal">
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
 
-                        <include
-                            layout="@layout/button_producto"
-                            android:layout_width="0dp"
+                            <ImageButton
+                                android:id="@+id/imageArandanos"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/arandanos"/>
+
+                            <TextView
+                                android:id="@+id/nombreArandanos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Arandanos Bandeja"/>
+                            <TextView
+                                android:id="@+id/precioArandano"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡8700"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_weight="1" />
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imageUva"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/uvas"/>
+
+                            <TextView
+                                android:id="@+id/nombreUva"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Uva Verde Bandeja"/>
+                            <TextView
+                                android:id="@+id/precioUva"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡7500"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imageHongo"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/hongo"/>
+
+                            <TextView
+                                android:id="@+id/nombreHongo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Hongo Blanco Rebanado"/>
+                            <TextView
+                                android:id="@+id/precioHonogo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡6290"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imagenFresas"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/fresa"/>
+
+                            <TextView
+                                android:id="@+id/nombreFreasas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Fresa Grande"/>
+                            <TextView
+                                android:id="@+id/precioFreasas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡5500"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+
+
+                            <ImageButton
+                                android:id="@+id/imagenCebolla"
+                                android:layout_width="182dp"
+                                android:layout_height="118dp"
+                                android:background="@drawable/roundstyle"
+                                android:backgroundTint="@color/light_gray"
+                                android:contentDescription="@string/app_name"
+                                android:padding="11dp"
+                                android:scaleType="fitCenter"
+                                tools:ignore="MissingConstraints"
+                                android:src="@mipmap/cebolla"/>
+
+                            <TextView
+                                android:id="@+id/nombreCebolla"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="11sp"
+                                tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="Cebolla Morada"/>
+                            <TextView
+                                android:id="@+id/precioCebolla"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="10sp"
+                                tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
+                                tools:ignore="MissingConstraints"
+                                android:text="₡2850"/>
+
+                        </LinearLayout>
+
 
                     </LinearLayout>
-
-
                 </HorizontalScrollView>
 
 
