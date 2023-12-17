@@ -1,3 +1,4 @@
+package com.example.myapplication
 
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
@@ -6,10 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.R
 import com.example.myapplication.modelo.Producto
-
-import java.util.Base64
 
 
 class ProductoAdapter(private val productList: List<Producto>) :
@@ -41,7 +39,6 @@ class ProductoAdapter(private val productList: List<Producto>) :
         val bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
         holder.imagenView.setImageBitmap(bitmap)
     }
-
 
 
     override fun getItemCount(): Int {

@@ -11,7 +11,3 @@ data class Producto(
     val disponibilidad: Int,
     val patrocinado: Int
 )
-
-
-
-

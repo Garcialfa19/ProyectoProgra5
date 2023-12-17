@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import NetworkConfig
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -12,35 +13,33 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.myapplication.modelo.Cliente
-import org.json.JSONException
-import org.json.JSONObject
 
-class  Perfil : AppCompatActivity() {
-    var id:Int = 0
+class Perfil : AppCompatActivity() {
+    var id: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_view)
 
         //llamo al boton y llamo al listener
-            val btn: Button = findViewById(R.id.btnAgregar)
-            btn.setOnClickListener {
-                registrarMetDir(it)
-            }
+        val btn: Button = findViewById(R.id.btnAgregar)
+        btn.setOnClickListener {
+            registrarMetDir(it)
+        }
 
         //asocio la clase text view al nombre del componente
-            val usuario:TextView=findViewById(R.id.txtUsuario)
-            val cupones:TextView=findViewById(R.id.CuponesButton)
+        val usuario: TextView = findViewById(R.id.txtUsuario)
+        val cupones: TextView = findViewById(R.id.CuponesButton)
 
         //recibo los extras
-            id= getIntent().getIntExtra("id",0)
-            val nombre:String? = getIntent().getStringExtra("nombre")
-            val cuponesR:Int = getIntent().getIntExtra("cupones",0)
+        id = getIntent().getIntExtra("id", 0)
+        val nombre: String? = getIntent().getStringExtra("nombre")
+        val cuponesR: Int = getIntent().getIntExtra("cupones", 0)
 
         //cambio los text view
-            usuario.setText(nombre)
-            cupones.setText(cuponesR.toString())
+        usuario.setText(nombre)
+        cupones.setText(cuponesR.toString())
     }
+
     //Funcion de boton configuracion
     fun configuracion(view: View) {
         println("Estoy en configuracion")
@@ -49,12 +48,13 @@ class  Perfil : AppCompatActivity() {
     }
 
     //funcion agregar metodo y direccion
-    fun registrarMetDir(view: View){
+    fun registrarMetDir(view: View) {
         //recibo lo que se encuentre en los text view de direccion y metodo de pago
-        var direccion:TextView?=findViewById(R.id.textDireccionActual)
-        var metodo:TextView?=findViewById(R.id.textMetodoPago)
+        var direccion: TextView? = findViewById(R.id.textDireccionActual)
+        var metodo: TextView? = findViewById(R.id.textMetodoPago)
 
-        val ipAddress = NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
+        val ipAddress =
+            NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
         val url = "http://$ipAddress/ecomerce/insertarMetodoDireccion.php"
 
         //Log the URL
@@ -64,11 +64,19 @@ class  Perfil : AppCompatActivity() {
         var resultadoPost = object : StringRequest(
             Request.Method.POST, url,
             Response.Listener<String> { response ->
-                Toast.makeText(this, "Direccion y metodo insertados exitosamente", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    "Direccion y metodo insertados exitosamente",
+                    Toast.LENGTH_LONG
+                ).show()
             }, Response.ErrorListener { error ->
                 // Step 6: Log detailed error information
                 Log.e("VOLLEY_ERROR", "Error: ${error.networkResponse?.statusCode}", error)
-                Toast.makeText(this, "Error ${error.networkResponse?.statusCode}", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    "Error ${error.networkResponse?.statusCode}",
+                    Toast.LENGTH_LONG
+                ).show()
             }) {
             override fun getParams(): MutableMap<String, String>? {
                 val parametros = HashMap<String, String>()
@@ -88,6 +96,7 @@ class  Perfil : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
+
     //Funciones de botones
     fun homePerfil(view: View) {
         println("Estoy en home")

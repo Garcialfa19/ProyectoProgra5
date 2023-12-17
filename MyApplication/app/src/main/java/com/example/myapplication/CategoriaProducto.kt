@@ -1,7 +1,7 @@
 package com.example.myapplication
 
 
-import ProductoAdapter
+import NetworkConfig
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.os.Bundle
@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.myapplication.R
 import com.example.myapplication.modelo.Producto
 import org.json.JSONException
 import org.json.JSONObject
@@ -30,7 +29,8 @@ class CategoriaProducto : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.rvListaProductos)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val ipAddress = NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
+        val ipAddress =
+            NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
         val categoria: String? = intent.getStringExtra("categoria")
         val url = "http://$ipAddress/ecomerce/productos.php?categoria=$categoria"
         Log.d("URL_LOG", "Request URL: $url")
