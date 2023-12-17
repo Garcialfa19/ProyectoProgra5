@@ -1,7 +1,5 @@
-import android.graphics.Bitmap
+
 import android.graphics.BitmapFactory
-import android.os.AsyncTask
-import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.modelo.Producto
-import java.lang.Exception
+
+import java.util.Base64
+
 
 class ProductoAdapter(private val productList: List<Producto>) :
     RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>() {
@@ -36,38 +36,17 @@ class ProductoAdapter(private val productList: List<Producto>) :
         holder.descripcionTextView.text = producto.descripcion
         holder.precioTextView.text = producto.precioUnitario.toString()
 
-        holder.imagenView.setImageResource(R.mipmap.arandanos);
-
+        // Decode and set the image from base64
+        val imageBytes = android.util.Base64.decode(producto.imagen, android.util.Base64.DEFAULT)
+        val bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+        holder.imagenView.setImageBitmap(bitmap)
     }
+
+
 
     override fun getItemCount(): Int {
         return productList.size
     }
 
-//    private class LoadImageAsyncTask(private val imageView: ImageView) :
-//        AsyncTask<String, Void, Bitmap?>() {
-//
-//        override fun doInBackground(vararg params: String): Bitmap? {
-//            val base64String = params[0]
-//            return decodeBase64(base64String)
-//        }
-//
-//        override fun onPostExecute(result: Bitmap?) {
-//            if (result != null) {
-//                imageView.setImageBitmap(result)
-//            } else {
-//                // Handle image loading error
-//            }
-//        }
-//
-//        private fun decodeBase64(base64String: String): Bitmap? {
-//            return try {
-//                val imageBytes = Base64.decode(base64String, Base64.DEFAULT)
-//                BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//                null
-//            }
-//        }
-//    }
+
 }
