@@ -1,7 +1,7 @@
 package com.example.myapplication
 
 
-import ProductoAdapter
+import NetworkConfig
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.os.Bundle
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.myapplication.R
+import com.example.myapplication.databinding.ProductoViewBinding
 import com.example.myapplication.modelo.Producto
 import org.json.JSONException
 import org.json.JSONObject
@@ -21,13 +21,17 @@ import org.json.JSONObject
 
 class CategoriaProducto : AppCompatActivity() {
     private val productList: MutableList<Producto> = mutableListOf()
+    private lateinit var binding: ProductoViewBinding
+    var carroCompras = ArrayList<Producto>()
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.producto_view)
+        // Inflar el binding correctamente
+        binding = ProductoViewBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val recyclerView: RecyclerView = findViewById(R.id.rvListaProductos)
+        val recyclerView: RecyclerView = binding.rvListaProductos
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val ipAddress = NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
@@ -81,8 +85,10 @@ class CategoriaProducto : AppCompatActivity() {
                     }
 
                     // Set up RecyclerView and Adapter
-                    val adapter = ProductoAdapter(productList)
-                    recyclerView.adapter = adapter
+                    binding.rvListaProductos.layoutManager = LinearLayoutManager(this)
+                    val adapter = CarritoAdapter(this, productList, carroCompras)
+                    binding.rvListaProductos.adapter = adapter
+
 
                 } catch (e: JSONException) {
                     e.printStackTrace()

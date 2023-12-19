@@ -1,3 +1,4 @@
+
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
@@ -10,10 +11,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.modelo.Producto
-import java.lang.Exception
 
-class ProductoAdapter(private val productList: List<Producto>) :
+class ProductoAdapter(var tvTotal:TextView, private val productList: List<Producto>) :
     RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>() {
+
+    var total: Double=0.0
 
     class ProductoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nombreTextView: TextView = itemView.findViewById(R.id.tvNomProducto)
@@ -25,6 +27,12 @@ class ProductoAdapter(private val productList: List<Producto>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_producto, parent, false)
+        total=0.0
+
+        productList.forEach{
+            total +=it.precioUnitario
+        }
+        tvTotal.text= "$$total"
         return ProductoViewHolder(view)
     }
 

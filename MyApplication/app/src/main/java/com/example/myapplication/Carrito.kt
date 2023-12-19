@@ -1,36 +1,37 @@
 package com.example.myapplication
 
+import ProductoAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.databinding.CartViewBinding
+import com.example.myapplication.modelo.Producto
+
 
 
 class Carrito : AppCompatActivity() {
+    private lateinit var binding: CartViewBinding
+    private lateinit var adapter: ProductoAdapter
 
-    //private lateinit var binding: ActivityMainBinding
-//    private lateinit var adapter: AdaptadorProducto
-
-//   AdaptadorProducto var listaProductos = ArrayList<Producto>()
-//    var carroCompras = ArrayList<Producto>()
+    var carroCompras = ArrayList<Producto>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityCrritoBinding.inflate(layoutInflater)
-        setContentView(R.layout.cart_view)
+        binding = CartViewBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-//        carroCompras = intent.getSerializableExtra("carro_compras") as ArrayList<Producto>
+        carroCompras = intent.getSerializableExtra("carro_compras") as ArrayList<Producto>
 
-//        setupRecyclerView()
+        setupRecyclerView()
     }
 
-
-//    fun setupRecyclerView() {
-//        binding.rvListaCarro.layoutManager = LinearLayoutManager(this)
-//        adapter = AdaptadorCarrito(binding.tvTotal, carroCompras)
-//        binding.rvListaCarro.adapter = adapter
-//    }
+    fun setupRecyclerView() {
+        binding.categoriaView.layoutManager = LinearLayoutManager(this)
+        adapter = ProductoAdapter(binding.total, carroCompras)
+        binding.categoriaView.adapter = adapter
+    }
 
 
     fun homeCarrito(view: View) {

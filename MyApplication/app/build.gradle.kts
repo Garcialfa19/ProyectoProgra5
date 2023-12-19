@@ -50,6 +50,7 @@ dependencies {
     implementation("androidx.databinding:databinding-common:8.1.4")
     implementation("com.caverock:androidsvg:1.4")
     testImplementation("junit:junit:4.13.2")
+    implementation ("com.android.volley:volley:x.y.z")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
