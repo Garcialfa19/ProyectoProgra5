@@ -30,7 +30,7 @@
             android:textSize="11sp"
             tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="0dp"
             tools:ignore="MissingConstraints"
-            android:text="Coca-Cola Zero 2.5L"/>
+            android:text="Nombre Producto"/>
     <TextView
             android:id="@+id/textView24"
             android:layout_width="wrap_content"
@@ -39,6 +39,6 @@
             android:textSize="10sp"
             tools:layout_editor_absoluteY="132dp" tools:layout_editor_absoluteX="0dp"
             tools:ignore="MissingConstraints"
-            android:text="₡1,560"/>
+            android:text="Precio"/>
 
 </LinearLayout>

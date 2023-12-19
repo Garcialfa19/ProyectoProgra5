@@ -1,3 +1,5 @@
+package com.example.myapplication
+
 import java.net.InetAddress
 import java.net.NetworkInterface
 
@@ -22,6 +24,7 @@ class IP {
                     }
                 }
             }
+
         } catch (e: Exception) {
             e.printStackTrace()
         }

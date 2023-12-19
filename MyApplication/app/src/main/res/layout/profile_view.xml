@@ -36,27 +36,13 @@
         <!--Cupones main layout-->
         <LinearLayout
             android:id="@+id/cupones_container_layout"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
             android:orientation="horizontal"
-            tools:ignore="MissingConstraints">
-
-
-            <Button
-                android:id="@+id/CuponesButton"
-                android:layout_width="306dp"
-                android:layout_height="72dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:backgroundTint="@color/light_gray"
-                android:radius="12dp"
-                android:text="25,000"
-                android:textAlignment="textStart"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+            tools:ignore="MissingConstraints"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
 
             <ImageView
                 android:id="@+id/CuponesImage"
@@ -65,6 +51,21 @@
                 android:layout_marginEnd="5dp"
                 android:src="@mipmap/cash"
                 tools:ignore="ExtraText" />
+            <Button
+                android:id="@+id/CuponesButton"
+                android:layout_width="306dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/light_gray"
+                android:radius="12dp"
+                android:text="25,000"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
 
         </LinearLayout>
 
@@ -72,25 +73,27 @@
         <!--Direcciones layout-->
         <LinearLayout
             android:id="@+id/direcciones_container_layout"
-            android:layout_width="match_parent"
-            android:layout_height="142dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Dirección:"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/MapaImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginEnd="5dp"
+                android:src="@mipmap/mapa"
+                tools:ignore="ExtraText" />
 
             <EditText
                 android:id="@+id/textDireccionActual"
-                android:layout_width="wrap_content"
-                android:layout_height="115dp"
+                android:layout_width="300dp"
+                android:layout_height="75dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
@@ -98,8 +101,9 @@
                 android:background="@drawable/roundstyle"
                 android:backgroundTint="@color/light_gray"
                 android:gravity="center"
-                android:text="Ingresar dirección"
-                android:textSize="25sp"
+                android:text=""
+                android:hint="Ingresar dirección"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
 
@@ -109,25 +113,26 @@
         <!--tarjetas layout-->
         <LinearLayout
             android:id="@+id/pago_container_layout"
-            android:layout_width="match_parent"
-            android:layout_height="133dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="Método de Pago:"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/TarjetaImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginEnd="5dp"
+                android:src="@mipmap/tarjeta"
+                tools:ignore="ExtraText" />
 
             <EditText
                 android:id="@+id/textMetodoPago"
-                android:layout_width="wrap_content"
-                android:layout_height="115dp"
+                android:layout_width="300dp"
+                android:layout_height="75dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
@@ -135,8 +140,9 @@
                 android:background="@drawable/roundstyle"
                 android:backgroundTint="@color/light_gray"
                 android:gravity="center"
-                android:text="Ingresar método de pago"
-                android:textSize="25sp"
+                android:text=""
+                android:hint="Ingresar método de pago"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -149,7 +155,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/roundstyle"
-            android:text="Agregar"
+            android:text="Actualizar"
             android:onClick="configuracion"
             android:textAllCaps="false"
             android:textSize="20dp"

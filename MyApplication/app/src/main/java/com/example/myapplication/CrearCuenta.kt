@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import NetworkConfig
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -39,7 +40,8 @@ class CrearCuenta : AppCompatActivity() {
     }
 
     fun registrar(view: View) {
-        val ipAddress = NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
+        val ipAddress =
+            NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
         val url = "http://$ipAddress/ecomerce/insertar.php"
 
         //Log the URL
@@ -53,7 +55,11 @@ class CrearCuenta : AppCompatActivity() {
             }, Response.ErrorListener { error ->
                 // Step 6: Log detailed error information
                 Log.e("VOLLEY_ERROR", "Error: ${error.networkResponse?.statusCode}", error)
-                Toast.makeText(this, "Error ${error.networkResponse?.statusCode}", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    "Error ${error.networkResponse?.statusCode}",
+                    Toast.LENGTH_LONG
+                ).show()
             }) {
             override fun getParams(): MutableMap<String, String>? {
                 val parametros = HashMap<String, String>()
