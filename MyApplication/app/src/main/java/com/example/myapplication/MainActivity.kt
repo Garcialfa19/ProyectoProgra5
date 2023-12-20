@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
 
                         var cupones: Int? = 0
                         var cuJSON: Any = clienteJson?.get("cupones").toString()
-                        if (tiJSON == "null")
+                        if (cuJSON == "null")
                             cupones = 0
                         else
                             cupones = clienteJson?.getInt("cupones")
@@ -171,3 +171,4 @@ class MainActivity : AppCompatActivity() {
         queue.add(stringRequest)
     }
 }
+

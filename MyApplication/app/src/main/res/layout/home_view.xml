@@ -564,7 +564,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imageArandanos"
+                                android:id="@+id/imagenMascotas1"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -576,7 +576,7 @@
                                 android:src="@mipmap/arandanos"/>
 
                             <TextView
-                                android:id="@+id/nombreArandanos"
+                                android:id="@+id/textoMascotas1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -586,7 +586,7 @@
                                 tools:ignore="MissingConstraints"
                                 android:text="Arandanos Bandeja"/>
                             <TextView
-                                android:id="@+id/precioArandano"
+                                android:id="@+id/precioMascotas1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -606,7 +606,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imageUva"
+                                android:id="@+id/imagenMascotas2"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -618,7 +618,7 @@
                                 android:src="@mipmap/uvas"/>
 
                             <TextView
-                                android:id="@+id/nombreUva"
+                                android:id="@+id/textoMascotas2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -628,7 +628,7 @@
                                 tools:ignore="MissingConstraints"
                                 android:text="Uva Verde Bandeja"/>
                             <TextView
-                                android:id="@+id/precioUva"
+                                android:id="@+id/precioMascotas2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -648,7 +648,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imageHongo"
+                                android:id="@+id/imagenMascotas3"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -660,7 +660,7 @@
                                 android:src="@mipmap/hongo"/>
 
                             <TextView
-                                android:id="@+id/nombreHongo"
+                                android:id="@+id/textoMascotas3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -670,7 +670,7 @@
                                 tools:ignore="MissingConstraints"
                                 android:text="Hongo Blanco Rebanado"/>
                             <TextView
-                                android:id="@+id/precioHonogo"
+                                android:id="@+id/precioMascotas3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -690,7 +690,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imagenFresas"
+                                android:id="@+id/imagenFresas1"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -702,7 +702,7 @@
                                 android:src="@mipmap/fresa"/>
 
                             <TextView
-                                android:id="@+id/nombreFreasas"
+                                android:id="@+id/nombreFresas1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -712,7 +712,7 @@
                                 tools:ignore="MissingConstraints"
                                 android:text="Fresa Grande"/>
                             <TextView
-                                android:id="@+id/precioFreasas"
+                                android:id="@+id/precioFresas1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -732,7 +732,7 @@
 
 
                             <ImageButton
-                                android:id="@+id/imagenCebolla"
+                                android:id="@+id/imagenCebolla1"
                                 android:layout_width="182dp"
                                 android:layout_height="118dp"
                                 android:background="@drawable/roundstyle"
@@ -744,7 +744,7 @@
                                 android:src="@mipmap/cebolla"/>
 
                             <TextView
-                                android:id="@+id/nombreCebolla"
+                                android:id="@+id/nombreCebolla1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"
@@ -754,7 +754,7 @@
                                 tools:ignore="MissingConstraints"
                                 android:text="Cebolla Morada"/>
                             <TextView
-                                android:id="@+id/precioCebolla"
+                                android:id="@+id/precioCebolla1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/black"

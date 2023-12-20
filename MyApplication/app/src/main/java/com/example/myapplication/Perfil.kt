@@ -13,12 +13,21 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import org.json.JSONException
+import org.json.JSONObject
 
 class Perfil : AppCompatActivity() {
     var id: Int = 0
+    var correo: String?=""
+    var contrasena: String?=""
+    var nombre:String?=""
+    var cupones:Int?=0
+    var metodo:String?=""
+    var direccion:String?=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_view)
+
 
         //llamo al boton y llamo al listener
         val btn: Button = findViewById(R.id.btnAgregar)
@@ -28,16 +37,22 @@ class Perfil : AppCompatActivity() {
 
         //asocio la clase text view al nombre del componente
         val usuario: TextView = findViewById(R.id.txtUsuario)
-        val cupones: TextView = findViewById(R.id.CuponesButton)
+        val cuponesTxt: TextView = findViewById(R.id.CuponesButton)
 
-        //recibo los extras
+        /*recibo los extras
         id = getIntent().getIntExtra("id", 0)
         val nombre: String? = getIntent().getStringExtra("nombre")
-        val cuponesR: Int = getIntent().getIntExtra("cupones", 0)
+        val cuponesR: Int = getIntent().getIntExtra("cupones", 0)*/
 
-        //cambio los text view
+        correo =getIntent().getStringExtra("correo")
+        contrasena=getIntent().getStringExtra("contrasena")
+
+        //una vez extraidas las credenciales, se llama a extraer cliente
+        extraerCliente()
+
+        //extraer cliente actualiza el nombre y cupones, ahora cambio los text view
         usuario.setText(nombre)
-        cupones.setText(cuponesR.toString())
+        cuponesTxt.setText(cupones.toString())
     }
 
     //Funcion de boton configuracion
@@ -122,5 +137,84 @@ class Perfil : AppCompatActivity() {
         println("Estoy en profile")
         //val intent = Intent(this, Perfil::class.java)
         //startActivity(intent)
+    }
+
+
+    fun extraerCliente() {
+
+        val ipAddress =
+            NetworkConfig.getBaseUrl() // cambiar la ip en la clase que se llama NetworkConfig
+        val url = "http://$ipAddress/ecomerce/login.php"
+
+        val queue = Volley.newRequestQueue(this)
+
+        // Log the altered URL
+        val alteredUrl = "$url?correo=$correo&contrasena=$contrasena"
+        Log.d("URL_LOG", "Altered Request URL: $alteredUrl")
+
+
+
+        val stringRequest = StringRequest(
+            Request.Method.GET,
+            alteredUrl,
+            { response ->
+                // Log the entire response for debugging
+                Log.d("FULL_RESPONSE", response)
+
+                // Parse the JSON response
+                try {
+                    val jsonResponse = JSONObject(response)
+                    val success = jsonResponse.getBoolean("success")
+
+                    if (success) {
+                        // Authentication successful
+
+                        // se llama al json respuesta de nombre cliente
+                        val clienteJson = jsonResponse?.getJSONObject("cliente")
+
+                        //se extrae la informacion del cliente
+                        nombre=clienteJson?.getString("nombre")
+
+                        var cuJSON: Any = clienteJson?.get("cupones").toString()
+                        cupones = if (cuJSON == "null")
+                            0
+                        else
+                            clienteJson?.getInt("cupones")
+
+                        var diJSON: Any = clienteJson?.get("direccion").toString()
+                        direccion = if (diJSON == "null")
+                            ""
+                        else
+                            clienteJson?.getString("direccion")
+
+                        var mpJSON: Any = clienteJson?.get("metodoDePago").toString()
+                        metodo = if (mpJSON == "null")
+                            ""
+                        else
+                            clienteJson?.getString("metodoDePago")
+
+
+                    } else {
+                        // Authentication failed
+                        val message = jsonResponse.getString("message")
+                        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+                    }
+                } catch (e: JSONException) {
+                    // Handle JSON parsing error
+                    Log.e("JSON_ERROR", "Error parsing JSON", e)
+                    Toast.makeText(this, "Error parsing JSON", Toast.LENGTH_LONG).show()
+                }
+            },
+            { error ->
+                // Handle error
+                Log.e("VOLLEY_ERROR", "Error: ${error.networkResponse?.statusCode}", error)
+                Toast.makeText(
+                    this,
+                    "Error ${error.networkResponse?.statusCode}",
+                    Toast.LENGTH_LONG
+                ).show()
+            })
+
+        queue.add(stringRequest)
     }
 }
