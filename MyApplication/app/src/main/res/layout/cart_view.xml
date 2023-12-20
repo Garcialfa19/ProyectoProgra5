@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CartViewBinding"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Carrito">
@@ -31,15 +32,214 @@
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categoriaView"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="410dp"
+        android:layout_height="448dp"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainLayout"
-        android:layout_height="0dp"
-        android:layout_width="match_parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/mainLayout">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNomProducto1"
+                    android:layout_width="255dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:hint="Aceite Salat Oliva"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvDescripcion1"
+                    android:layout_width="255dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:hint="Ligero y sutil, perfecto para ensaladas con sabores suaves"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="255dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/precio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+
+                        android:text="Precio: ₡"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvPrecio1.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="left"
+                        android:hint="9430
+"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNomProducto2"
+                    android:layout_width="255dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:hint="Café Britt Tarrazu Montecielo Grano"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvDescripcion2"
+                    android:layout_width="255dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:hint="Elaborado a partir del mas fino café de Tarrazú, región formada por altas y empinadas montañas"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="255dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/precio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+
+                        android:text="Precio: ₡"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvPrecio1.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="left"
+                        android:hint="6150"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                tools:srcCompat="@tools:sample/avatars" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNomProducto3"
+                    android:layout_width="255dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:hint="Ravioli Carne Pasta Y Basta Paquete"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tvDescripcion3"
+                    android:layout_width="255dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:hint="Deliciosa pasta fresca rellena con carne, fácil y rápido de preparar"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="255dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/precio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+
+                        android:text="Precio: ₡"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvPrecio1.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="left"
+                        android:hint="7415"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
     <Button
         android:id="@+id/button4"
@@ -48,6 +248,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/roundstyle"
+        android:onClick="comprar"
         android:text="Finalizar Compra"
         android:textAllCaps="false"
         android:textSize="20dp"
@@ -58,14 +259,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
             android:id="@+id/BtnHome"
@@ -75,11 +274,11 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name"
             android:onClick="homeCarrito"
             android:scaleType="fitCenter"
-            android:src="@mipmap/inicio_g"
-            android:backgroundTint="@color/white"/>
+            android:src="@mipmap/inicio_g" />
 
         <ImageButton
             android:id="@+id/BtnCategoria"
@@ -89,11 +288,11 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name"
             android:onClick="categoriasCarrito"
             android:scaleType="fitCenter"
-            android:src="@mipmap/categoria_g"
-            android:backgroundTint="@color/white"/>
+            android:src="@mipmap/categoria_g" />
 
         <ImageButton
             android:id="@+id/BtnCarrito"
@@ -103,11 +302,11 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name"
             android:onClick="cartCarrito"
             android:scaleType="fitCenter"
-            android:src="@mipmap/shopping"
-            android:backgroundTint="@color/white"/>
+            android:src="@mipmap/shopping" />
 
         <ImageButton
             android:id="@+id/BtnPerfil"
@@ -117,11 +316,23 @@
             android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
+            android:backgroundTint="@color/white"
             android:contentDescription="@string/app_name"
             android:onClick="profileCarrito"
             android:scaleType="fitCenter"
-            android:src="@mipmap/profile_g"
-            android:backgroundTint="@color/white"/>
+            android:src="@mipmap/profile_g" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monto total: 23045"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

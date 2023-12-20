@@ -7,31 +7,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Producto">
 
+
     <ScrollView
         android:id="@+id/scroll_home_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="2.5dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginStart="2.5dp"
+        android:layout_marginTop="2.5dp"
         android:layout_marginEnd="2.5dp"
+        android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@+id/btnVolverCategoria"
         app:layout_constraintEnd_toStartOf="@id/btnVolverCategoria"
+        app:layout_constraintHorizontal_bias="0.017"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ScrollViewCount">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListaProductos"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        tools:listitem="@layout/item_producto"
-        app:layout_constraintBottom_toTopOf="@+id/btnVolverCategoria"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListaProductos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnVolverCategoria"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_producto" />
     </ScrollView>
-
 
     <Button
         android:id="@+id/btnVolverCategoria"

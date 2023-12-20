@@ -3,34 +3,28 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.modelo.Producto
 
 
 class Carrito : AppCompatActivity() {
-
-    //private lateinit var binding: ActivityMainBinding
-//    private lateinit var adapter: AdaptadorProducto
-
-//   AdaptadorProducto var listaProductos = ArrayList<Producto>()
-//    var carroCompras = ArrayList<Producto>()
+    var listaProductos = ArrayList<Producto>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityCrritoBinding.inflate(layoutInflater)
         setContentView(R.layout.cart_view)
 
-//        carroCompras = intent.getSerializableExtra("carro_compras") as ArrayList<Producto>
+        val btn: Button = findViewById(R.id.button4)
 
-//        setupRecyclerView()
+        btn.setOnClickListener {
+            Toast.makeText(this, "Compra exitosa", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, Inicio::class.java)
+            startActivity(intent)
+        }
     }
-
-
-//    fun setupRecyclerView() {
-//        binding.rvListaCarro.layoutManager = LinearLayoutManager(this)
-//        adapter = AdaptadorCarrito(binding.tvTotal, carroCompras)
-//        binding.rvListaCarro.adapter = adapter
-//    }
 
 
     fun homeCarrito(view: View) {
@@ -38,6 +32,8 @@ class Carrito : AppCompatActivity() {
         val intent = Intent(this, Inicio::class.java)
         startActivity(intent)
     }
+
+
 
     fun categoriasCarrito(view: View) {
         println("Estoy en categorias")

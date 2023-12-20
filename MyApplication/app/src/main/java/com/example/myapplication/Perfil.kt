@@ -24,6 +24,7 @@ class Perfil : AppCompatActivity() {
     var cupones:Int?=0
     var metodo:String?=""
     var direccion:String?=""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_view)
@@ -194,7 +195,6 @@ class Perfil : AppCompatActivity() {
                             ""
                         else
                             clienteJson?.getString("metodoDePago")
-
 
                     } else {
                         // Authentication failed
