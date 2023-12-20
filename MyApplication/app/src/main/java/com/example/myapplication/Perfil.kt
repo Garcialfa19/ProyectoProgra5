@@ -174,12 +174,14 @@ class Perfil : AppCompatActivity() {
 
                         //se extrae la informacion del cliente
                         nombre=clienteJson?.getString("nombre")
+                        println(nombre)
 
                         var cuJSON: Any = clienteJson?.get("cupones").toString()
                         cupones = if (cuJSON == "null")
                             0
                         else
                             clienteJson?.getInt("cupones")
+                        println(cupones)
 
                         var diJSON: Any = clienteJson?.get("direccion").toString()
                         direccion = if (diJSON == "null")
