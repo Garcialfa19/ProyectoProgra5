@@ -18,12 +18,6 @@ import org.json.JSONObject
 
 class Perfil : AppCompatActivity() {
     var id: Int = 0
-    var correo: String?=""
-    var contrasena: String?=""
-    var nombre:String?=""
-    var cupones:Int?=0
-    var metodo:String?=""
-    var direccion:String?=""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,21 +33,31 @@ class Perfil : AppCompatActivity() {
         //asocio la clase text view al nombre del componente
         val usuario: TextView = findViewById(R.id.txtUsuario)
         val cuponesTxt: TextView = findViewById(R.id.CuponesButton)
+        val direccionTxt: TextView = findViewById(R.id.textDireccionActual)
+        val metodoTxt: TextView = findViewById(R.id.textMetodoPago)
 
-        /*recibo los extras
+        //recibo los extras
         id = getIntent().getIntExtra("id", 0)
-        val nombre: String? = getIntent().getStringExtra("nombre")
-        val cuponesR: Int = getIntent().getIntExtra("cupones", 0)*/
+        val nombreR: String? = getIntent().getStringExtra("nombre")
+        val cuponesR: Int = getIntent().getIntExtra("cupones", 0)
+        var direccionR: String? = getIntent().getStringExtra("direccion")
+        var metodoR: String? = getIntent().getStringExtra("metodoDePago")
 
-        correo =getIntent().getStringExtra("correo")
-        contrasena=getIntent().getStringExtra("contrasena")
+        //extraerCliente()
 
-        //una vez extraidas las credenciales, se llama a extraer cliente
-        extraerCliente()
+        //Cambio los text view
+        usuario.text = nombreR
+        cuponesTxt.text=(cuponesR.toString())
 
-        //extraer cliente actualiza el nombre y cupones, ahora cambio los text view
-        usuario.setText(nombre)
-        cuponesTxt.setText(cupones.toString())
+        if(direccionR=="")
+            direccionTxt.text="Introducir dirección"
+        else
+            direccionTxt.text = direccionR
+
+        if(metodoR=="")
+            metodoTxt.text="Introducir método de pago"
+        else
+            metodoTxt.text = metodoR
     }
 
     //Funcion de boton configuracion
@@ -141,6 +145,7 @@ class Perfil : AppCompatActivity() {
     }
 
 
+    /*
     fun extraerCliente() {
 
         val ipAddress =
@@ -174,15 +179,14 @@ class Perfil : AppCompatActivity() {
                         val clienteJson = jsonResponse?.getJSONObject("cliente")
 
                         //se extrae la informacion del cliente
-                        nombre=clienteJson?.getString("nombre")
-                        println(nombre)
+                        var nombreR=clienteJson?.getString("nombre")
+
 
                         var cuJSON: Any = clienteJson?.get("cupones").toString()
-                        cupones = if (cuJSON == "null")
+                        var cuponesR = if (cuJSON == "null")
                             0
                         else
                             clienteJson?.getInt("cupones")
-                        println(cupones)
 
                         var diJSON: Any = clienteJson?.get("direccion").toString()
                         direccion = if (diJSON == "null")
@@ -195,6 +199,7 @@ class Perfil : AppCompatActivity() {
                             ""
                         else
                             clienteJson?.getString("metodoDePago")
+
 
                     } else {
                         // Authentication failed
@@ -218,5 +223,5 @@ class Perfil : AppCompatActivity() {
             })
 
         queue.add(stringRequest)
-    }
+    }*/
 }
