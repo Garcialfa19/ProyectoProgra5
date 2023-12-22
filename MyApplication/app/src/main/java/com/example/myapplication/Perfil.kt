@@ -30,6 +30,13 @@ class Perfil : AppCompatActivity() {
             registrarMetDir(it)
         }
 
+        val btn1: Button = findViewById(R.id.btnCerrarSesion)
+        btn1.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+
         //asocio la clase text view al nombre del componente
         val usuario: TextView = findViewById(R.id.txtUsuario)
         val cuponesTxt: TextView = findViewById(R.id.CuponesButton)
